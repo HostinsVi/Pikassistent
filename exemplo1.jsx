@@ -101,5 +101,3 @@ function App() {
 } 
 
 export default App
-
-// com o cobertor, você sempre o estende a partir das pontas de menor aresta, essas sendo as que você vai levar até o varal primeiro; ai você coloca-o no varal, depois igualha o tamanho entre ambos os lados de menor aresta e abra os lados maiores o máximo possível evitando deixar sobreposições. Se não couber você extende em mais varetas

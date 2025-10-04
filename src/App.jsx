@@ -1,13 +1,14 @@
 import './App.css'
 
-function App() {
 
+
+      
+
+
+function App() {
+  
   return (
     <>
-      <recentes>
-      teste
-
-      </recentes>
     </>
   )
 }
