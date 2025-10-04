@@ -1,3 +1,3 @@
-# React + Vite
+# O que é
 
-Projeto de aplicativo para assistir usuários a adentrar o mundo pokemon.
+O Pikassistent é um projeto de aplicativo para assistir usuários a adentrar o mundo pokemon.
