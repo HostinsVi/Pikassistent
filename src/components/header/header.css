@@ -1,0 +1,13 @@
+.header_container {
+    height: 7.2vh;
+    padding: 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgoldenrod;
+}
+
+.header_container img {
+    height: 6vh;
+    width: auto;
+}
