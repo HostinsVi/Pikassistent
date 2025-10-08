@@ -2,10 +2,21 @@ import masterBall from "./masterBall.png";
 import premierBall from './premierball.png';
 import pokedex from './pokedexIcon.png';
 import chatIcon from './chatDefault.png';
+import background from './background.jpeg';
+import loginbgg from './loginbgg.jpeg';
+import logo from './logo.jpeg';
+import pika from './pika.png';
+
+
 
 export { 
     masterBall,
     premierBall,
     pokedex,
-    chatIcon
+    chatIcon,
+    background,
+    loginbgg,
+    logo,
+    pika,
+    
 };
