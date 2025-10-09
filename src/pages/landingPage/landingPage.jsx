@@ -1,22 +1,27 @@
-import {
-  masterBall,
-  premierBall,
-  pokedex,
-  chatIcon,
-} from "../../assets/img/index.jsx";
+import { useEffect, useState } from "react";
 import FastAccess from "../../components/fastAccess/fastAccess.jsx";
 import Header from "../../components/header/header.jsx";
 import "./landingPage.css";
+import getDevice from "../../hooks/getDevice.js";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
+  const [device, setDevice] = useState();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setDevice(getDevice());
+    console.log(device)
+  }, [device]);
+
   return (
     <section className="landingPage_container">
-      <Header />
+      <Header state="default"/>
 
       <main className="landingPage_content">
         <p>Mundo pokasekjlaskelahfaça seu login agora e junte-se a nos!...!</p>
 
-        <button>Cadastre-se aqui!!</button>
+        <button onClick={() => navigate('/login')}>Cadastre-se aqui!!</button>
 
         <section className="pikassistentIntro_container">
           <h2>O que é o pikassistent</h2>
@@ -30,8 +35,14 @@ function LandingPage() {
         </section>
 
         <section className="p_container">
-          <p>Por que?</p>
-          <p>Como?</p>
+          <aside className="textWhy_container">
+          <h3>Por que?</h3>
+          <p>text</p>
+          </aside>
+          <aside className="textHow_container">
+          <h3>Como?</h3>
+          <p>text</p>
+          </aside>
         </section>
       </main>
       <FastAccess />

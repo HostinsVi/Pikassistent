@@ -1,6 +1,6 @@
 .header_container {
+    width: 100vw;
     height: 7.2vh;
-    padding: 15px;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -9,5 +9,12 @@
 
 .header_container img {
     height: 6vh;
+    margin: 15px;
     width: auto;
+}
+
+.absoluteHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
