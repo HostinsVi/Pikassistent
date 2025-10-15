@@ -6,6 +6,7 @@ import background from './background.jpeg';
 import loginbgg from './loginbgg.jpeg';
 import logo from './logo.jpeg';
 import pika from './pika.png';
+import icon2 from './icon2.png';
 
 
 
@@ -18,5 +19,5 @@ export {
     loginbgg,
     logo,
     pika,
-    
+    icon2
 };

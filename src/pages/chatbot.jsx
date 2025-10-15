@@ -1,5 +1,5 @@
 import React from 'react';
-import {pika, icon2} from "../../assets/img";
+import {pika, icon2} from "../assets/img/";
 
 function ChatInput(){
   return(

@@ -16,7 +16,7 @@ function Login() {
 
   return (
     <section className="login_container">
-      <Header state="dinamic"/>
+      <Header state="absolute"/>
       <main className="login_content">
         <h1>Login</h1>
         <section className="loginInput_container">
@@ -36,7 +36,7 @@ function Login() {
           />
         </section>
       </main>
-      <button onClick={handleLogin()}>Sla q nome</button>
+      <button onClick={() => handleLogin()}>Sla q nome</button>
     </section>
   );
 }

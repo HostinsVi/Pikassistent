@@ -2,17 +2,12 @@ import { useEffect, useState } from "react";
 import FastAccess from "../../components/fastAccess/fastAccess.jsx";
 import Header from "../../components/header/header.jsx";
 import "./landingPage.css";
-import getDevice from "../../hooks/getDevice.js";
 import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
-  const [device, setDevice] = useState();
+
   const navigate = useNavigate();
 
-  useEffect(() => {
-    setDevice(getDevice());
-    console.log(device)
-  }, [device]);
 
   return (
     <section className="landingPage_container">
