@@ -1,5 +1,5 @@
 import { logo, masterBall } from "../../assets/img";
-import "./Header.css";
+import "./header.css";
 
 function Header({ state }) {
   return (
