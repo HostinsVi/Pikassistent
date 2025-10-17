@@ -4,6 +4,9 @@ import Header from "../../components/header/header.jsx";
 import "./landingPage.css";
 import { useNavigate } from "react-router-dom";
 
+// Botão de cadastro  está levando direto pra home e pulando login pra facilitar o desenvolvimento.
+
+
 function LandingPage() {
 
   const navigate = useNavigate();
@@ -16,7 +19,7 @@ function LandingPage() {
       <main className="landingPage_content">
         <p>Mundo pokasekjlaskelahfaça seu login agora e junte-se a nos!...!</p>
 
-        <button onClick={() => navigate('/login')}>Cadastre-se aqui!!</button>
+        <button onClick={() => navigate('/home')}>Cadastre-se aqui!!</button>
 
         <section className="pikassistentIntro_container">
           <h2>O que é o pikassistent</h2>

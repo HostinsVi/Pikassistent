@@ -4,6 +4,7 @@ import LandingPage from './pages/landingPage/landingPage'
 import Chatbot from './pages/chatbot'
 import Login from './pages/login/login'
 import Registration from './components/registration/registration'
+import Home from './components/home/home.jsx'
 
 // procurei sobre router no google e o que tinha aqui ( ta no final do doc ) parecia
 // ser a versão antiga, acabou q essa aqui tmb n é a atual, mas resolvi ficar com ela
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/registration',
     element: <Registration />
+  },
+  {
+    path: '/home',
+    element: <Home />
   }
 ]);
      
