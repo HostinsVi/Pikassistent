@@ -1,7 +1,7 @@
 import './App.css'
 import {createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import LandingPage from './pages/landingPage/landingPage'
-import Chatbot from './pages/chatbot'
+import Chatbot from './pages/chatbot/chatbot.jsx'
 import Login from './pages/login/login'
 import Registration from './components/registration/registration'
 import Home from './components/home/home.jsx'
