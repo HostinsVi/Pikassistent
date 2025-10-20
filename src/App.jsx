@@ -5,11 +5,23 @@ import Chatbot from './pages/chatbot'
 import Login from './pages/login/login'
 import Registration from './components/registration/registration'
 import Home from './components/home/home.jsx'
+import NavBar from './components/home/components/homeHeader/homeNavbar.jsx'
+
 
 // procurei sobre router no google e o que tinha aqui ( ta no final do doc ) parecia
 // ser a versão antiga, acabou q essa aqui tmb n é a atual, mas resolvi ficar com ela
 // pq pelo q vi do tutorial ali, é bem simples de adicionar children pras páginas,
 // oq vai deixar a pokedex mais fácil de fazer e isso aq é o msm de antes, mas OOP.
+
+const HomeLayout = () => {
+  return (
+    <>
+      <NavBar />
+      <Home />
+    </>
+  )
+}
+
 
 const router = createBrowserRouter([
   { // Landing
@@ -34,8 +46,8 @@ const router = createBrowserRouter([
   },
   {
     path: '/home',
-    element: <Home />
-  }
+    element: <HomeLayout />
+  },
 ]);
      
 function App() {
