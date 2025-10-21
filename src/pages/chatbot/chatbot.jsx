@@ -1,8 +1,6 @@
 import React from 'react';
 import pika from "../../assets/img/pika.png";
 import icon2 from "../../assets/img/icon2.png";
-import { send } from 'vite';
-import Chatbot from "https://unpkg.com/supersimpledev/chatbot.js";
 
 
 function ChatInput(chatMessages, setChatMessages){

@@ -28,7 +28,7 @@ function NavBar() {
             return (
               <li key={index} className={item.cName}>
                 <Link to={item.path}>
-                  <img src={item.image}></img>
+                  <img src={item.image} className="nav-img"></img>
                   <span>{item.title}</span>
                 </Link>
               </li>
