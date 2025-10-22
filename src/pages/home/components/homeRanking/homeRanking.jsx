@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 function HomeRanking() {
   return (
     <>
-      ranking
+      <Link to="/ranking">Ranking</Link>
+
     </>
   )
 }

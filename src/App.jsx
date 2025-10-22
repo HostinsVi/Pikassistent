@@ -4,8 +4,9 @@ import LandingPage from './pages/landingPage/landingPage'
 import Chatbot from './pages/chatbot/chatbot.jsx'
 import Login from './pages/login/login'
 import Registration from './components/registration/registration'
-import Home from './components/home/home.jsx'
-import NavBar from './components/home/components/homeHeader/homeNavbar.jsx'
+import Home from './pages/home/home.jsx'
+import NavBar from './pages/home/components/homeHeader/homeNavbar.jsx'
+import Ranking from './pages/ranking/ranking.jsx'
 
 
 // procurei sobre router no google e o que tinha aqui ( ta no final do doc ) parecia
@@ -21,6 +22,15 @@ const HomeLayout = () => {
     </>
   )
 }
+
+const RankingLayout = () => {
+  return (
+    <>
+      <NavBar />
+      <Ranking />
+    </>
+  )
+}  
 
 
 const router = createBrowserRouter([
@@ -48,6 +58,10 @@ const router = createBrowserRouter([
     path: '/home',
     element: <HomeLayout />
   },
+  {
+    path: '/ranking',
+    element: <RankingLayout />
+  }
 ]);
      
 function App() {

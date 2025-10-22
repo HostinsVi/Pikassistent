@@ -38,8 +38,8 @@ export const SidebarData = [
   },
   {
     title: "Ajuda",
-     titleClass: "title-nav-bar",
-    path: "/help",
+    titleClass: "title-nav-bar",
+    path: "https://github.com/HostinsVi/Pikassistent",
     cName: "nav-container",
     image: gachahome
   }

@@ -10,6 +10,9 @@ import HomePokedex from './components/homePokedex/homePokedex';
 //     close
 //   }
 // }
+// tem que botar algo assim nas páginas que usam navbar
+// para que o usuário consiga sair do menu sem ter que 
+// apertar no botão de menu de novo
 
 function Home() {
   return (
