@@ -2,33 +2,45 @@ import { home, gachahome, pokeballhome, iahome, chathome } from '../../../../ass
 
 export const SidebarData = [
   {
-    title: "home",
+    title: "Home",
+    titleClass: "title-nav-bar",
     path: "/home",
-    cName: "nav-text",
+    cName: "nav-container",
     image: home,
   },
   {
     title: "Chat Global",
+    titleClass: "title-nav-bar",
     path: "/chatglobal",
-    cName: "nav-text",
+    cName: "nav-container",
     image: chathome,    
   },
   {
     title: "Pokedex",
+    titleClass: "title-nav-bar",
     path: "/pokedex",
-    cName: "nav-text",
+    cName: "nav-container",
     image: pokeballhome,
   },
   {
     title: "ChatBot",
+    titleClass: "title-nav-bar",
     path: "/chatbot",
-    cName: "nav-text",
+    cName: "nav-container",
     image: iahome,
   },
   {
     title: "Gacha",
+    titleClass: "title-nav-bar",
     path: "/gacha",
-    cName: "nav-text",
+    cName: "nav-container",
+    image: gachahome
+  },
+  {
+    title: "Ajuda",
+     titleClass: "title-nav-bar",
+    path: "/help",
+    cName: "nav-container",
     image: gachahome
   }
 ]

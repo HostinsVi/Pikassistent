@@ -14,8 +14,6 @@ import HomePokedex from './components/homePokedex/homePokedex';
 function Home() {
   return (
     <div className="home">
-      <div className='header'>
-      </div>
       <div className='homeGachaRanking'>
         <HomeRanking />
         <HomeGacha />

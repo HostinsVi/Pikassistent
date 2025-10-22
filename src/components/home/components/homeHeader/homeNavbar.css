@@ -1,56 +1,131 @@
+/* NAVBARU */
+
+.header {
+  height: 0;
+}
+
 .navbar {
   height: 50px;
-  background-color: grey;
+  background-color: #3f3f3f;
 }
 
-.menu-bars {
-  display: none;
-  background-color: blue;
-}
-
-.nav-menu{
-  display: none;
+.nav-menu {
+  display: flex;
+  flex-direction: column;
   width: 40%;
 }
 
 .nav-menu.active {
-  display: flex;
-  background-color: #FFDE59; 
+  border-right: 2px solid black;
+  background-color:#FFDE59;
 }
 
-.navbtn {
-  margin: 10px ;
-  width: 70px;
-  height: 30px;
-  background-image: url("../../../../assets/img/menuhome.png");
-  background-size: 35px;
+.nav-btn-container {
+  display: flex;
+  width: 60px;
+  height: 25px;
+  margin: 14px;
   border: 1px solid black;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #3f3f3f;
+}
+
+.nav-btn-container.active {
+  width: 115px;
+  gap: 5px;
+  border: none;
+  color: black;
+
+}
+
+.nav-btn {
+  width: 100%;
+  padding: 5px;
+  background-image: url("../../../../assets/img/menuhomeoff.png");
+  background-size: contain;
+  border: 1px solid white;
   border-radius: 20px;
 }
 
 
 
-.nav-menu-items {
-  list-style: none;
-  padding: 10px;
-  height: 60px;
+.nav-btn-container.active > .nav-btn {
+  width: 25%;
+   background-image: url("../../../../assets/img/menuhome.png");
 }
 
-.nav-menu{
+.nav-btn-container > span {
+  display: none;
+}
+
+.nav-btn-container.active > span {
+  display: flex;
+  padding-left: 15px;
+  
+}
+
+.nav-menu-items {
   display: none;
   width: 40%;
 }
 
-.nav-menu.active {
+.nav-menu-items.active {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
+  width: auto;
   height: fit-content;
-  background-color: #FFDE59; 
+  align-items: center;
+  margin: -2px;
+  padding: 0;
+  padding-top: 5px;
+  border: 2px solid black;
+  border-radius: 0 0 15px 0;
+  border-left: none;
+  border-top: none;
+  background-color: #FFDE59;
+  list-style: none;
+}
 
+.nav-menu-items.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: #ada689;
+}
+
+.nav-container > a {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  color: black;
 }
 
 .nav-img {
   width: 35px;
   height: 35px;
 }
+
+.title-nav-bar {
+  text-align: center;
+  background-color: white;
+  border: 5px solid black;
+  border-left: none;
+  border-top: none;
+  border-radius: 12px;
+}
+/* 
+.title-nav-bar:hover {
+  background-color: red;
+  isso n funciona direito, só no modo inspecionar.
+} */
+
+
+
+/* RANKING */
+
