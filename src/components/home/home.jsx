@@ -4,12 +4,11 @@ import HomeGacha from './components/homeGacha/homeGacha';
 import HomeChatGlobal from './components/homeChatGlobal/homeChatGlobal';
 import HomePokedex from './components/homePokedex/homePokedex';
 
-document.addEventListener((event) => {
-  if (event.target is NOT the element
-  containing the image) {
-    close
-  }
-}
+// document.addEventListener((event) => {
+//   if (event.target is NOT the element
+//   containing the image) {
+//   }
+// }
 
 function Home() {
   return (

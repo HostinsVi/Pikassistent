@@ -1,12 +1,11 @@
 import React from 'react';
 import pika from "../../assets/img/pika.png";
 import icon2 from "../../assets/img/icon2.png";
-import { send } from 'vite';
-import Chatbot from "https://unpkg.com/supersimpledev/chatbot.js";
+
 
 
 function ChatInput(chatMessages, setChatMessages){
-  Const [inputText, setInputText] = React.useState('')
+  const [inputText, setInputText] = React.useState('')
 
   function saveInputText(event){
     setInputText(event.target.value)
@@ -96,7 +95,7 @@ function ChatMessages(chatMessages){
     )
 }
 
-export default function ChatApp(){
+function ChatApp(){
 
   const [chatMessages, setChatMessages] =  React.useState( [{
     message: "Ola chatbot",
@@ -139,3 +138,5 @@ export default function ChatApp(){
     </div>
   );
 }
+
+export default ChatApp

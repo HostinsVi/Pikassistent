@@ -1,15 +1,17 @@
+// Tem que importar muitas imagens pra ca, caso contrário n vai dar  certo isso aqui
+
 export const SidebarData = [
   {
     title: "home",
     path: "/home",
     cName: "nav-text",
-    image: "../../../../assets/img/homehome.png"
+    image: "../../../../../assets/img/background.jpeg"
   },
   {
     title: "Chat Global",
     path: "/chatglobal",
     cName: "nav-text",
-    image: "../../../../assets/img/homehome.png"    
+    image: "../../../../assets/img/premierball.png"    
   },
   {
     title: "Pokedex",

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import FastAccess from "../../components/fastAccess/fastAccess.jsx";
 import Header from "../../components/header/header.jsx";
 import "./landingPage.css";

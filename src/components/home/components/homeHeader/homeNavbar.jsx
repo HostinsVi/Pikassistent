@@ -8,7 +8,13 @@ function NavBar() {
 
   const showSidebar = () => setSidebar(!sidebar);
   
-
+// statusA:  descobrir como fazer a div da navbar não mover outros elementos
+// statusB: colocar imagens ao lado dos botões
+// statusC: tirar o efeito de link dos botoões
+// statusD: estender a barra até o final da paǵina ou até o meio da página e arrendondar a borda.
+// statusE: começar a sessão de ranking e gacha até sexta
+// statusF: chatglobal sábado de manhã + domingo
+// statusG: pokedex por último.
 
   return (
     <>
