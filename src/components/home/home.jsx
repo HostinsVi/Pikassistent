@@ -7,6 +7,7 @@ import HomePokedex from './components/homePokedex/homePokedex';
 // document.addEventListener((event) => {
 //   if (event.target is NOT the element
 //   containing the image) {
+//     close
 //   }
 // }
 

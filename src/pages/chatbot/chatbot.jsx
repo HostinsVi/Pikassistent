@@ -3,7 +3,6 @@ import pika from "../../assets/img/pika.png";
 import icon2 from "../../assets/img/icon2.png";
 
 
-
 function ChatInput(chatMessages, setChatMessages){
   const [inputText, setInputText] = React.useState('')
 
