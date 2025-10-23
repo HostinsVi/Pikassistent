@@ -2,17 +2,36 @@ import './App.css'
 import {createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import LandingPage from './pages/landingPage/landingPage'
 import Chatbot from './pages/chatbot/chatbot.jsx'
-import Login from './pages/login/login'
-import Registration from './components/registration/registration'
+import Login from './pages/login/login.jsx'
 import Home from './pages/home/home.jsx'
 import NavBar from './pages/home/components/homeHeader/homeNavbar.jsx'
 import Ranking from './pages/ranking/ranking.jsx'
+import Header from './components/header/header.jsx'
 
 
-// procurei sobre router no google e o que tinha aqui ( ta no final do doc ) parecia
-// ser a versão antiga, acabou q essa aqui tmb n é a atual, mas resolvi ficar com ela
-// pq pelo q vi do tutorial ali, é bem simples de adicionar children pras páginas,
-// oq vai deixar a pokedex mais fácil de fazer e isso aq é o msm de antes, mas OOP.
+// Pra adicionar uma rota, se precisar da navbar ou do header, cria um layout.
+// Toda rota precisa começar com maiuscula sempre. (Pascal case)
+// Ex.: const TesteLayout = () => {
+// return (
+//  <>
+//    <NavBar />
+//    <PaginaTeste />
+//  </>
+// )
+//}
+
+// A fazer: criar um arquivo PageLayouts e mover os Layouts pra lá, importando-as aqui.
+
+
+const LoginLayout = () => {
+  return (
+    <>
+      <Header />
+      <Login />
+    </>
+  )
+}
+
 
 const HomeLayout = () => {
   return (
@@ -40,7 +59,7 @@ const router = createBrowserRouter([
   },
   { // Login
     path: '/login',
-    element: <Login />
+    element: <LoginLayout />
   },
   { // Chatbot
     path: '/chatbot',
@@ -49,10 +68,6 @@ const router = createBrowserRouter([
   { // Redirect 
     path: '*',
     element: <Navigate to='/' replace/>
-  },
-  {
-    path: '/registration',
-    element: <Registration />
   },
   {
     path: '/home',

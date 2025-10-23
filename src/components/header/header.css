@@ -13,8 +13,6 @@
     width: auto;
 }
 
-.absoluteHeader {
-    position: absolute;
-    top: 0;
-    left: 0;
+.relativeHeader {
+    position: relative;
 }

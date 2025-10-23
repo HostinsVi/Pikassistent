@@ -5,7 +5,7 @@ function Header({ state }) {
   return (
     <header
       className={`header_container ${
-        state === "absolute" ? "absoluteHeader" : null
+        state === "relative" ? "relativeHeader" : null
       }`}
     >
       <img src={logo} alt="" />
