@@ -1,0 +1,46 @@
+button {
+  width: 90px;
+  height: 45px;
+  background-color: #ff7a29; /* cor laranja */
+  color: white; /* texto branco */
+  border: none; /* remove borda padrão */
+  border-radius: 6px; /* cantos arredondados */
+  font-weight: bold; /* texto em negrito */
+  cursor: pointer; /* mostra a mãozinha ao passar o mouse */
+  transition: background-color 0.3s ease; /* animação suave */
+}
+
+button:hover {
+  background-color: #9d4813; /* cor ligeiramente mais escura no hover */
+}
+
+
+
+input{
+  width: 250px !important;
+  height: 40px; 
+  margin-left: 1%;       /* espaço à esquerda */
+  margin-right: 1%;    /* espaço à direita */
+  border: 2px solid #ccc;      /* borda neutra e suave */
+  border-radius: 6px;          /* cantos arredondados iguais ao botão */
+  font-size: 15px;             /* tamanho de texto consistente */
+  color: #fff;                 /* cor do texto */
+  outline: none;               /* remove a borda azul padrão */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* animação suave */
+  width: 100%;                 /* ocupa o espaço disponível */
+  max-width: 300px;            /* limita a largura */
+}
+
+input:focus {
+  border-color: #ff7a29;       /* mesma cor do botão no foco */
+  box-shadow: 0 0 4px rgba(255, 122, 41, 0.4); /* brilho laranja suave */
+}
+
+chat-input-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* espaço entre o input e o botão */
+  margin-top: 20px; /* espaço acima da área de input */
+  flex-grow: 1;
+}
