@@ -1,35 +1,63 @@
 
 /* body */
 .login-container {
-  width: 100%;
-  height: 100%;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 950px;
+  position:relative;
+  background: radial-gradient(rgba(150, 98, 26, 0.80), rgb(240,168,41));
 
-/* div com os menus */
+}
+/* div com o form */
 .login-form-container {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  margin: 30px;
   width: 80%;
   height: 50%;
   background-color: white;
+  border: 1px solid black;
+  border-radius: 30px;
 }
+
+
+/* div com os menus */
+.login-form {
+  display: flex;
+  flex-direction: inherit;
+  gap: 10px;
+  align-items: center;
+  background-color: black;
+    border: 1px solid black;
+  border-radius: 30px;
+
+}
+
 
 /* menu de inputs */
 .login-form-inputs-container {
   display: flex;
-  flex-direction: inherit;
-  gap: 25px;
+  flex-direction: column;
   align-items: center;
-
+  padding-top: 10px;
+  gap: 10px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 30px;
 }
 
 /* menu de botões */
-login-form-btns-container {
+.login-form-btns-container {
   display: flex;
-  flex-direction: row;
-  background-color: red;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 20px;
+  font-size: small;
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 30px;
 }
 
 
@@ -39,22 +67,26 @@ login-form-btns-container {
   height: 10%;
 }
 
-.login-login-btn, .login-signup-btn, .login-google-btn {
-  width: 30%;
-  height: 10%;
-}
-
-.login-login-btn {
-
+.login-login-btn, .login-google-btn {
+  width: 50%;
+  height: 20%;
 }
 
 .login-signup-btn {
-  
+  display: flex;
+  height: 20%;
+  width: 50%;
+  background-color: #171717;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: white;
 }
 
-
-
-
+.login-signup-btn:hover {
+  color: white;
+  border: 1px solid white;
+}
 
 
 

@@ -7,6 +7,8 @@ import Home from './pages/home/home.jsx'
 import NavBar from './pages/home/components/homeHeader/homeNavbar.jsx'
 import Ranking from './pages/ranking/ranking.jsx'
 import Header from './components/header/header.jsx'
+import Footer from './components/footer/footer.jsx'
+import SignUp from './pages/signUp/signUp.jsx'
 
 
 // Pra adicionar uma rota, se precisar da navbar ou do header, cria um layout.
@@ -28,6 +30,7 @@ const LoginLayout = () => {
     <>
       <Header />
       <Login />
+      <Footer />
     </>
   )
 }
@@ -51,6 +54,15 @@ const RankingLayout = () => {
   )
 }  
 
+const SignUpLayout = () => {
+  return (
+    <>
+      <Header />
+      <SignUp />
+      <Footer />
+    </>
+  )
+}
 
 const router = createBrowserRouter([
   { // Landing
@@ -76,6 +88,10 @@ const router = createBrowserRouter([
   {
     path: '/ranking',
     element: <RankingLayout />
+  },
+  {
+    path: '/signup',
+    element: <SignUpLayout />
   }
 ]);
      

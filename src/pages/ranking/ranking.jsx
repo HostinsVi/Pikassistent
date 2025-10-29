@@ -3,7 +3,7 @@ import './ranking.css';
 
 function Ranking() {
  return (
-  // <div className='wrap'>
+  // <div className='ranking-wrap'>
   //   <div className='top-rank-container'>
   //     <div className='top-rank-columns'>
   //      {/* {rankingData.map((item, index) => {

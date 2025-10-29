@@ -4,7 +4,14 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkgoldenrod;
+    background: linear-gradient(to right,
+    rgb(240,168,41) 0%,     /* left yellow */
+    rgb(240,168,41) 1%,     /* start fading */
+    white 10%,              /* white under logo */
+    white 55%,              /* end white band */
+    rgb(240,168,41) 80%,    /* yellow resumes */
+    rgb(240,168,41) 100%    /* all yellow after */
+  );
 }
 
 .header_container img {

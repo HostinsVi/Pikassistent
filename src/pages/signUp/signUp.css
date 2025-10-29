@@ -1,0 +1,106 @@
+
+/* body */
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 950px;
+  position:relative;
+  background: radial-gradient(rgba(150, 98, 26, 0.80), rgb(240,168,41));
+}
+/* div com o form */
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 80%;
+  height: 55%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+
+
+
+/* div com os menus */
+.signup-form {
+  display: flex;
+  flex-direction: inherit;
+  gap: 10px;
+  align-items: center;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+/* menu de botões */
+.signup-form-btns-container {
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  align-items: center;
+  padding-top: 10px;
+  gap: 20px;
+  font-size: small;
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.login-google-btn, .signup-signup-btn {
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+.login-google-btn:hover, .signup-signup-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+/* menu de inputs */
+.signup-form-inputs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+  gap: 5px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: left;
+}
+
+/* menu de inputs de registro */
+
+.signup-input-container, .signup-select-container {
+  width: 90%;
+  height: 10%;
+}
+
+
+.signup-label {
+  display: block;
+  height: 10%;
+  padding: 10px 0 10px 15px; /*top right bottom left*/
+  font-weight: 500;
+  color: white;
+}
+
+.signup-login-btn {
+  height: 50%;
+  width: 70%;
+  background-color: black;
+  justify-content: center;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-login-btn:hover {
+  background-color: white;
+  color: black;
+}
