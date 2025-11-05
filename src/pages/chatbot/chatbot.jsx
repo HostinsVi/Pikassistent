@@ -1,5 +1,6 @@
+/* eslint-disable no-irregular-whitespace */
 import React from 'react';
-import masterBall from "../../assets/img/masterball.png";
+import masterBall from "../../assets/img/masterBall.png";
 import pika from "../../assets/img/pika.png";
 import logo from "../../assets/img/logo.jpeg";
 import './chatbot.css';

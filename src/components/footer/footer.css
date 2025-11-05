@@ -7,3 +7,8 @@ footer {
   background-color: black;
   color: lightgrey;
 }
+
+footer > p { 
+  margin: 0;
+  padding: 5px;
+}

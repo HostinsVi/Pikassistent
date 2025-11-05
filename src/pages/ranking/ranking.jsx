@@ -1,5 +1,20 @@
 import './ranking.css';
 // import { rankingData } from './userprofiles';
+import { query, collection, where, getDocs } from "firebase/firestore";
+import { db } from '../../assets/firebase';
+
+
+
+
+const get = () => {
+  const q = query(collection(db, 'users'), where("team", "==", "yellow"));
+  const querySnapshot = getDocs(q);
+  
+  querySnapshot.forEach((doc) => {
+      console.log(doc.id, "=>", doc.data());
+  });
+};
+
 
 function Ranking() {
  return (
@@ -17,8 +32,11 @@ function Ranking() {
   //     </div> */}
   //   </div>
     <div className='leaderboard-container'>
-      real
+      
+          <button onClick={ () => get() }> </button>    
+ 
     </div>
+
 
   // </div>
  )

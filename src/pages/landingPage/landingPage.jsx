@@ -5,20 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 // Botão de cadastro  está levando direto pra home e pulando login pra facilitar o desenvolvimento.
 
-
 function LandingPage() {
-
   const navigate = useNavigate();
-
 
   return (
     <section className="landingPage_container">
-      <Header state="default"/>
+      <Header state="default" />
 
       <main className="landingPage_content">
         <p>Mundo pokasekjlaskelahfaça seu login agora e junte-se a nos!...!</p>
 
-        <button onClick={() => navigate('/home')}>Cadastre-se aqui!!</button>
+        <button onClick={() => navigate("/home")}>Cadastre-se aqui!!</button>
 
         <section className="pikassistentIntro_container">
           <h2>O que é o pikassistent</h2>
@@ -27,18 +24,18 @@ function LandingPage() {
             Vokalia and Consonantia, there live the blind texts. Separated they
             live in Bookmarksgrove right at the coast of the Semantics, a large
             language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia. 
+            supplies it with the necessary regelialia.
           </p>
         </section>
 
         <section className="p_container">
           <aside className="textWhy_container">
-          <h3>Por que?</h3>
-          <p>text</p>
+            <h3>Por que?</h3>
+            <p>text</p>
           </aside>
           <aside className="textHow_container">
-          <h3>Como?</h3>
-          <p>text</p>
+            <h3>Como?</h3>
+            <p>text</p>
           </aside>
         </section>
       </main>

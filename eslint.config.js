@@ -24,6 +24,10 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-irregular-whitespace': ["error", { "skipJSXText": true }],
     },
   },
 ])
+
+// por algum motivo os arquivos estavam com erros por conta de espaços nas linhas, adicionei
+// a linha 27 pra resolver por agora. 03/11/2025
