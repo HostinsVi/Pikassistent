@@ -1,46 +1,118 @@
+/* RESET PARA O CHAT - Isso resolve o problema do * */
+.chat-app,
+.chat-container, 
+.chat-message-robot, 
+.chat-message-user,
+.chat-message-text,
+.chat-input-area,
+.robot-text,
+.user-text {
+  width: auto !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Imagens do chat */
+.chat-message-robot img,
+.chat-message-user img {
+  width: 35px !important;
+  height: auto !important;
+  flex-shrink: 0; /* impede que as imagens encolham */
+}
+
+/* BACKGROUND */
+.chat-app {
+  background-image: url('src/assets/img/background-blue-1.jpeg');
+  background-attachment: fixed;
+  background-size: 412px 915px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* BOTÃO */
 button {
   width: 90px;
   height: 45px;
-  background-color: #ff7a29; /* cor laranja */
-  color: white; /* texto branco */
-  border: none; /* remove borda padrão */
-  border-radius: 6px; /* cantos arredondados */
-  font-weight: bold; /* texto em negrito */
-  cursor: pointer; /* mostra a mãozinha ao passar o mouse */
-  transition: background-color 0.3s ease; /* animação suave */
+  background-color: #ff7a29;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* impede que o botão encolha */
 }
 
 button:hover {
-  background-color: #9d4813; /* cor ligeiramente mais escura no hover */
+  background-color: #9d4813;
 }
 
-
-
-input{
+/* INPUT */
+input {
   width: 250px !important;
   height: 40px; 
-  margin-left: 1%;       /* espaço à esquerda */
-  margin-right: 1%;    /* espaço à direita */
-  border: 2px solid #ccc;      /* borda neutra e suave */
-  border-radius: 6px;          /* cantos arredondados iguais ao botão */
-  font-size: 15px;             /* tamanho de texto consistente */
-  color: #fff;                 /* cor do texto */
-  outline: none;               /* remove a borda azul padrão */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* animação suave */
-  width: 100%;                 /* ocupa o espaço disponível */
-  max-width: 300px;            /* limita a largura */
+  margin-left: 1%;
+  margin-right: 1%;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #333; /* Mudei para escuro para melhor contraste */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  flex-shrink: 0;
 }
 
 input:focus {
-  border-color: #ff7a29;       /* mesma cor do botão no foco */
-  box-shadow: 0 0 4px rgba(255, 122, 41, 0.4); /* brilho laranja suave */
+  border-color: #ff7a29;
+  box-shadow: 0 0 4px rgba(255, 122, 41, 0.4);
 }
 
-chat-input-area {
+/* ÁREA DE INPUT */
+.chat-input-area {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* espaço entre o input e o botão */
-  margin-top: 20px; /* espaço acima da área de input */
+  gap: 10px;
+  margin-top: 20px;
   flex-grow: 1;
+  width: 100% !important;
+}
+
+/* MENSAGENS */
+.chat-message-user {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+  align-items: flex-start; /* Mudei para flex-start para melhor alinhamento */
+}
+
+.chat-message-robot {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+  align-items: flex-start;
+}
+
+.chat-message-text {
+  padding: 12px 16px;
+  border-radius: 10px;
+  max-width: 70%;
+  margin: 0 10px;
+  border: 2px solid #000;
+  word-wrap: break-word;
+}
+
+.robot-text {
+  background-color: #2e86ab;
+  color: white;
+  border-radius: 0 6px 24px 6px;
+  position: relative;
+}
+
+.user-text {
+  background-color: #ff7a29;
+  color: #fff;
+  border-radius: 6px 0 6px 24px;
+  position: relative;
 }
