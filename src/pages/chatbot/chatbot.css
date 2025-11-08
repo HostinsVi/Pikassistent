@@ -1,4 +1,4 @@
-/* RESET PARA O CHAT - Isso resolve o problema do * */
+/* RESET PARA O CHAT - Isso resolve o problema do *(css global que estava afetando o css do chatbot) */
 .chat-app,
 .chat-container, 
 .chat-message-robot, 
