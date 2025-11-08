@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { handleGoogleLogin, handleLogin } from "../../assets/firebase";
+
+
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="login-container">
@@ -28,12 +31,11 @@ function Login() {
             />
           </div>
           <div className="login-form-btns-container">
-            <button className="login-login-btn" onClick={() => {handleLogin()}}>Log in</button>
+            <button type="button" className="login-login-btn" onClick={() => {handleLogin ? navigate("/home") : alert('/falha ao fazer o login')}}>Log in</button>
             <Link to="/SignUp" className="login-signup-btn">
               Sign Up
             </Link>
             <button type="button" className="login-google-btn" onclick={() => {handleGoogleLogin()}}>
-              {" "}
               Continue With Google{" "}
             </button>
           </div>

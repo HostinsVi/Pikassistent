@@ -11,7 +11,7 @@ const get = () => {
   const querySnapshot = getDocs(q);
   
   querySnapshot.forEach((doc) => {
-      console.log(doc.id, "=>", doc.data());
+      console.log(doc.team, "=>", doc.data());
   });
 };
 

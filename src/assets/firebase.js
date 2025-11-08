@@ -4,6 +4,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { signInWithEmailAndPassword, signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
 
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyCoAszHtDNMyLKM6ccSFLrdQSY2tEFkYYg",
   authDomain: "pikassistent.firebaseapp.com",
@@ -59,11 +60,9 @@ export const handleSignUp = (email, username, password, team, idNumber) => {
 export const handleLogin = (email, password) => {
 
     signInWithEmailAndPassword(auth, email, password).then(() => {
-      console.log("Logged in");
+      return true;
     }).catch((error) => {
-        const errorMessage = error.message;
-        alert(errorMessage);
-        console.log("n funfou o login"); 
+      return false;
     });
 }
 
