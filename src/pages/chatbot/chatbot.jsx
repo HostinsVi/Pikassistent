@@ -142,11 +142,6 @@ function ChatApp(){
             <ChatMessages 
             chatMessages={chatMessages}
             />
-            <footer style={{ marginTop: "20px", textAlign: "center" }}>
-                <p>
-                    © 2025 Pikassistent — Pokémon e nomes de personagens são marcas registradas da Nintendo.
-                </p>
-            </footer>
         </div>
     );
 }
