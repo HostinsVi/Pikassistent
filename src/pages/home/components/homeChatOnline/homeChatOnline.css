@@ -1,0 +1,36 @@
+.home-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.chat-preview {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 10px;
+  width: 250px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.2s ease;
+}
+
+.chat-preview:hover {
+  transform: scale(1.03);
+}
+
+.chat-preview h4 {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.chat-preview p {
+  width: auto;
+  height: auto;
+  margin: 2px 0;
+  border-top: 1px dotted black;
+}
+
+.chat-preview p:nth-child(1) {
+  border: none;
+}

@@ -9,7 +9,8 @@ import Ranking from './pages/ranking/ranking.jsx'
 import Header from './components/header/header.jsx'
 import Footer from './components/footer/footer.jsx'
 import SignUp from './pages/signUp/signUp.jsx'
-
+import ChatOnline from './pages/chatOnline/chatOnline.jsx'
+import Gacha from './pages/gacha/gacha.jsx'
 
 // Pra adicionar uma rota, se precisar da navbar ou do header, cria um layout.
 // Toda rota precisa começar com maiuscula sempre. (Pascal case)
@@ -64,6 +65,33 @@ const SignUpLayout = () => {
   )
 }
 
+const ChatOnlineLayout = () => {
+  return (
+    <>
+      <NavBar />
+      <ChatOnline />
+    </>
+  )
+}
+
+const ChatBotLayout = () => {
+  return (
+    <>
+      <NavBar />
+      <Chatbot />
+    </>
+  )
+}
+
+const GachaLayout = () => {
+  return (
+    <>
+      <NavBar />
+      <Gacha />
+    </>
+  )
+}
+
 const router = createBrowserRouter([
   { // Landing
     path: '/',
@@ -75,7 +103,7 @@ const router = createBrowserRouter([
   },
   { // Chatbot
     path: '/chatbot',
-    element: <Chatbot />
+    element: <ChatBotLayout />
   },
   { // Redirect 
     path: '*',
@@ -92,6 +120,14 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <SignUpLayout />
+  },
+  {
+    path: '/chatonline',
+    element: <ChatOnlineLayout />
+  },
+  {
+    path: '/gacha',
+    element: <GachaLayout />
   }
 ]);
      

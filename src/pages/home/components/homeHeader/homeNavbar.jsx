@@ -25,6 +25,7 @@ function NavBar() {
 
   return (
     <>
+    
       <div className="navbar">
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <div className={sidebar ? "nav-btn-container active" : "nav-btn-container"}>

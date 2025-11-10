@@ -1,8 +1,10 @@
-import './home.css';
 import HomeRanking from './components/homeRanking/homeRanking';
 import HomeGacha from './components/homeGacha/homeGacha';
-import HomeChatGlobal from './components/homeChatGlobal/homeChatGlobal';
+import HomeChatOnline from './components/homeChatOnline/homeChatOnline';
 import HomePokedex from './components/homePokedex/homePokedex';
+import { Link } from "react-router-dom";
+import './home.css';
+import FastAccess from '../../components/fastAccess/fastAccess';
 
 // document.addEventListener((event) => {
 //   if (event.target is NOT the element
@@ -17,12 +19,15 @@ import HomePokedex from './components/homePokedex/homePokedex';
 function Home() {
   return (
     <div className="home">
-      <div className='homeGachaRanking'>
-        <HomeRanking />
-        <HomeGacha />
+      <div className='homeFastAccess'>
+       <FastAccess />
+       <p className='homeFastAccess-paragraph'>Mensagens Recentes: </p>
+       <Link to="/chatonline" className='homeChatOnline'>
+         <HomeChatOnline />
+        </Link>
       </div>
-      <div className='homeChatGlobal'>
-        <HomeChatGlobal />
+      <div className='homeGacha'>
+        <HomeGacha />
       </div>
       <div className='homePokedex'>
         <HomePokedex />

@@ -6,12 +6,23 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  
+  padding-top: 50px;
 }
+/* Esse padding top é pra ajustar o fato que a navbar 
+  tem position:fixed, então os elementos da página passam
+  por baixo dela. Por conta que cada home tem um nome diferente
+  pra div principal, eu to colocando o padding top na div root.
+  
+  como n fiz a adaptação da navbar, temos duas barras diferentes. 
+*/
+
+
 
 /* TUDO QUE É ESCRITO NESTE ARQUIVO AFETA TODAS AS PÁGINAS. */
 

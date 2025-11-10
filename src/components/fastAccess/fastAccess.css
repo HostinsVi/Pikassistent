@@ -1,17 +1,17 @@
 .fastAccess_container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    width: 75%;
+    height: auto;
     align-items: flex-end;
-    background-color: #440404; /* trocar cor de fundo */
-    z-index: 1000; /* garante que ficará acima de outros elementos */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* sombra para destacar */
+    justify-content: space-evenly;
     padding: 1vh 0; /* adiciona espaçamento interno */
+    background-color: #440404; /* trocar cor de fundo */
+    border-radius: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* sombra para destacar */
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
 }
 
 .fastAccess_container img{ 

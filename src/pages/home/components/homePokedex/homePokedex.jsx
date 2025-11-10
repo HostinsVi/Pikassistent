@@ -1,7 +1,9 @@
+import PokemonCarousel from "./components/homePokedexCarousel";
+
 function HomePokedex() {
   return (
     <>
-      pokedex
+      <PokemonCarousel />
     </>
   )
 }

@@ -11,7 +11,7 @@ export const SidebarData = [
   {
     title: "Chat Global",
     titleClass: "title-nav-bar",
-    path: "/chatglobal",
+    path: "/chatonline",
     cName: "nav-container",
     image: chathome,    
   },

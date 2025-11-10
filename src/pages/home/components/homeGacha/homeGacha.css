@@ -1,0 +1,10 @@
+.gacha-container {
+  border: 1px solid black;
+  width: 80%;
+  text-align: center;
+  color: black;
+}
+
+.gacha-link {
+  color: red;
+}

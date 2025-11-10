@@ -12,6 +12,7 @@
   "dependencies": {
     "firebase": "^12.4.0",
     "firebase-tools": "^14.20.0",
+    "framer-motion": "^12.23.24",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-pro-sidebar": "^1.1.0",
