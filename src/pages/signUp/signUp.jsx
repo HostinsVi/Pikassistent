@@ -16,14 +16,13 @@ function SignUp() {
       <div className="signup-form-container">
         <form className="signup-form">
           <div className="signup-form-btns-container">
-            <button type="button" className="login-google-btn">
-              {" "}
-              Continue With Google{" "}
+            <button type="button" className="signup-google-btn">
+              Continuar com o Google
             </button>
             <span>Or fill below</span>
           </div>
           <div className={"signup-form-inputs-container"}>
-            <label className="signup-label">Email</label>
+            <label className="signup-label">Email:</label>
             <input
               className="signup-input-container"
               type="email"
@@ -31,7 +30,7 @@ function SignUp() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your Email"
             />
-            <label className="signup-label">Username</label>
+            <label className="signup-label">Username:</label>
             <input
               className="signup-input-container"
               type="text"
@@ -40,7 +39,7 @@ function SignUp() {
               placeholder="Enter your Username"
             />
 
-            <label className="signup-label">Password</label>
+            <label className="signup-label">Password:</label>
             <input
               className="signup-input-container"
               type="password"
@@ -49,7 +48,7 @@ function SignUp() {
               placeholder="Eles que lutem."
             />
 
-            <label className="signup-label">Team</label>
+            <label className="signup-label">Team:</label>
             <select
               className="signup-select-container"
               value={team}
@@ -74,7 +73,7 @@ function SignUp() {
               </button>
             </Link>
             <Link to="/login" className="signup-login-btn">
-              or return to login page
+              <span>or return to login page</span>
             </Link>
           </div>
         </form>

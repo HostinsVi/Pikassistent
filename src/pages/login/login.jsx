@@ -14,7 +14,9 @@ function Login() {
     <div className="login-container">
       <div className="login-form-container">
         <form className={"login-form"}>
+          <h1>Login</h1>
           <div className={"login-form-inputs-container"}>
+            <label>Email:</label>
             <input
               className="login-input-container"
               type="email"
@@ -22,6 +24,7 @@ function Login() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your Email"
             />
+            <label>Senha:</label>
             <input
               className="login-input-container"
               type="password"
@@ -31,12 +34,12 @@ function Login() {
             />
           </div>
           <div className="login-form-btns-container">
-            <button type="button" className="login-login-btn" onClick={() => {handleLogin ? navigate("/home") : alert('/falha ao fazer o login')}}>Log in</button>
             <Link to="/SignUp" className="login-signup-btn">
-              Sign Up
+              <span>Não tem uma conta? cadastre-se!</span>
             </Link>
+            <button type="button" className="login-login-btn" onClick={() => {handleLogin ? navigate("/home") : alert('/falha ao fazer o login')}}>Entrar</button>
             <button type="button" className="login-google-btn" onclick={() => {handleGoogleLogin()}}>
-              Continue With Google{" "}
+              Continuar com o Google
             </button>
           </div>
         </form>

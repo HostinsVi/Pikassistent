@@ -1,10 +1,50 @@
 .gacha-container {
-  border: 1px solid black;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.chest-button {
+  background: gold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chest-button:hover {
+  background: orange;
+}
+
+.cooldown-box {
+  background: #555;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
   text-align: center;
-  color: black;
 }
 
 .gacha-link {
-  color: red;
+  color: cyan;
+  text-decoration: none;
+}
+
+.reward-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.reward-display img {
+  width: 150px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }

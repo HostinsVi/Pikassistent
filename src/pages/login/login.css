@@ -3,48 +3,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 950px;
-  position:relative;
-  background: radial-gradient(rgba(150, 98, 26, 0.80), rgb(240,168,41));
-
+  /* position:relative; */
+  background-image: url("../../assets/img/background-blue-1.jpeg");
+  color: black;
 }
+
+
 /* div com o form */
 .login-form-container {
   display: flex;
   flex-direction: column;
-  padding: 5px;
   width: 80%;
   height: 50%;
+  padding: 10px;
   background-color: white;
   border: 1px solid black;
   border-radius: 30px;
 }
 
-
 /* div com os menus */
 .login-form {
   display: flex;
-  flex-direction: inherit;
-  height: 100%;
-  gap: 10px;
+  flex-direction: column;
   align-items: center;
-  background-color: black;
-    border: 1px solid black;
-  border-radius: 30px;
-
 }
 
+h1 {
+  margin: 10px;
+}
+
+h1, label {
+  width: auto;
+  height: auto;
+  font-size: medium;
+}
 
 /* menu de inputs */
 .login-form-inputs-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-  gap: 10px;
-  background-color: red;
-  border: 1px solid black;
-  border-radius: 30px;
+  gap: 5px;
+  height: 49%;
+
+}
+
+.login-input-container {
+  height: 15%;
+  margin: 0;
+}
+
+input {
+  background-color: white;
+  color: black;
 }
 
 /* menu de botões */
@@ -52,157 +62,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10px;
+  height: 49%;
   gap: 20px;
   font-size: small;
-  background-color: blue;
-  border: 1px solid black;
-  border-radius: 30px;
+
 }
 
-
-
-.login-input-container {
-  width: 60%;
-  height: 10%;
-}
-
-.login-login-btn, .login-google-btn {
-  width: 50%;
-  height: 20%;
+.login-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  
 }
 
 .login-signup-btn {
-  display: flex;
-  height: 20%;
-  width: 50%;
-  background-color: #171717;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  color: white;
+  height: auto;
+ color: blue;
+ text-decoration: underline;
 }
 
-.login-signup-btn:hover {
-  color: white;
-  border: 1px solid white;
+.login-google-btn {
+  width: auto;
+  background-color: lightblue;
+  color: grey;
 }
-
-
-
-/* 
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-header {
-  display: flex;
-  height: 40px;
-  padding: 10px;
-  background-color: rgba(41, 23, 24);
-}
-
-.header-button {
-  margin-left: auto;
-  width: 120px;
-}
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 950px;
-  position:relative;
-  background: radial-gradient(rgba(150, 98, 26, 0.49), rgba(240,168,41));
-}
-main::before {
-  width: 100%;
-  height: 100%;
-  content:"";
-  position: absolute;
-  background-image: url("./assets/loginbgg.jpeg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.login-container {
-    background-color: rgb(135, 64, 55);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    max-width: 400px;
-    text-align: center;
-    opacity: 0.95;
-}
-
-
-.login-container h2 {
-    margin-bottom: 30px;
-    color: rgb(250, 233, 208);
-}
-
-.login-container input {
-    width: 100%;
-    padding: 12px 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid rgb(150, 98, 26);
-    font-size: 16px;
-    background-color: rgb(250, 233, 208);
-    color: rgb(41, 23, 24);
-}
-
-.login-container button {
-    width: 100%;
-    padding: 12px;
-    background-color: rgb(240, 168, 41);
-    color: rgb(41, 23, 24);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.login-container button:hover {
-    background-color: rgb(150, 98, 26);
-}
-
-.login-container a {
-    display: block;
-    margin-top: 15px;
-    color: rgb(240, 168, 41);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.login-container a:hover {
-    text-decoration: underline;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  margin-top: auto;
-  background-color: rgb(41, 23, 24);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: rgb(41, 23, 24);
-    background-color: rgb(250, 233, 208);
-  }
-  a:hover {
-    color: rgb(135, 64, 55);
-  }
-  button {
-    background-color: rgb(240, 168, 41);
-  }
-} */
-

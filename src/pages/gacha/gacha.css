@@ -1,0 +1,46 @@
+.gacha-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-image: url("../../assets/img/background-blue-1.jpeg");
+  color: white;
+}
+
+h1 {
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.card-item {
+  height: auto;
+  padding: 0.5rem;
+  background: #1e1e1e;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card-item img {
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-info {
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+.rarity {
+  font-size: 0.9rem;
+  color: gold;
+}
