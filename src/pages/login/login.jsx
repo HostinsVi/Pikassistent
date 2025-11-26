@@ -13,7 +13,9 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-form-container">
-        <form className={"login-form"}>
+        <form 
+        onSubmit={(e) => e.preventDefault()}
+        className={"login-form"}>
           <h1>Login</h1>
           <div className={"login-form-inputs-container"}>
             <label>Email:</label>
@@ -37,8 +39,19 @@ function Login() {
             <Link to="/SignUp" className="login-signup-btn">
               <span>Não tem uma conta? cadastre-se!</span>
             </Link>
-            <button type="button" className="login-login-btn" onClick={() => {handleLogin ? navigate("/home") : alert('/falha ao fazer o login')}}>Entrar</button>
-            <button type="button" className="login-google-btn" onclick={() => {handleGoogleLogin()}}>
+              <button
+                type="button"
+                className="login-login-btn"
+                onClick={async () => {
+                  const ok = await handleLogin(email, password);
+                  if (ok) navigate("/home");
+                  else alert("Falha ao fazer login");
+                }}
+              >
+                Entrar
+              </button>
+
+            <button type="button" className="login-google-btn" onClick={() => {handleGoogleLogin}}>
               Continuar com o Google
             </button>
           </div>

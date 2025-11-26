@@ -24,7 +24,7 @@ function NavBar() {
 // statusG: pokedex por último.
 
 
-// mover Navbar pra c
+// mover Navbar pra components
 
   return (
     <>

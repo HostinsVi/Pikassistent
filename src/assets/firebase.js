@@ -24,7 +24,6 @@ export const googleProvider = new GoogleAuthProvider(); // libera o login atrav�
 export const db = getFirestore(app); // isso cria o cloud de usuários
 
 
-
 // pq uma função tava usando promise e a outra async ???????
 
 export const handleSignUp = (email, username, password, team, idNumber) => {
@@ -57,21 +56,23 @@ export const handleSignUp = (email, username, password, team, idNumber) => {
 // login - não tenho certeza se funciona pq a página reinicia quando recebe o form.
 // se souber o pq me fala, deve ser algo do router/useState
 
-export const handleLogin = (email, password) => {
+export const handleLogin = async (email, password) => {
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    return true;
+  } catch (e) {
+    console.error(e);
+    return false;
+  }
+};
 
-    signInWithEmailAndPassword(auth, email, password).then(() => {
-      return true;
-    }).catch((error) => {
-      return false;
-    });
-}
 
 // precisa usar useRef pra descobrir se o login ta funcionando. eu acho.
 
 
 export const handleGoogleLogin = async() => {
   try {
-    await signInWithPopup(auth,googleProvider);
+    await signInWithPopup(auth, googleProvider);
   } catch (error) {
     console.error(error);
   }
