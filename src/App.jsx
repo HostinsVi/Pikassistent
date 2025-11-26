@@ -11,6 +11,8 @@ import Footer from './components/footer/footer.jsx'
 import SignUp from './pages/signUp/signUp.jsx'
 import ChatOnline from './pages/chatOnline/chatOnline.jsx'
 import Gacha from './pages/gacha/gacha.jsx'
+import Pokedex from './pages/pokedex/pokedex.jsx'
+import PokemonDetail from './pages/pokemonDetail/pokemonDetail.jsx'
 
 // Pra adicionar uma rota, se precisar da navbar ou do header, cria um layout.
 // Toda rota precisa começar com maiuscula sempre. (Pascal case)
@@ -92,6 +94,16 @@ const GachaLayout = () => {
   )
 }
 
+const PokedexLayout = () => {
+  return (
+    <>
+      <Header />
+      <Pokedex />
+      <Footer />
+    </>
+  )
+}
+
 const router = createBrowserRouter([
   { // Landing
     path: '/',
@@ -128,6 +140,14 @@ const router = createBrowserRouter([
   {
     path: '/gacha',
     element: <GachaLayout />
+  },
+  {
+    path: '/pokedex',
+    element: <Pokedex />
+  },
+  {
+    path: '/pokemon/:id',
+    element: <PokemonDetail />
   }
 ]);
      
