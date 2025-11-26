@@ -5,6 +5,7 @@
 }
 
 .chat-preview {
+  max-height: 150px;
   border: 1px solid #aaa;
   border-radius: 8px;
   padding: 10px;
@@ -12,6 +13,7 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.7);
   transition: transform 0.2s ease;
+  overflow-y: scroll;
 }
 
 .chat-preview:hover {

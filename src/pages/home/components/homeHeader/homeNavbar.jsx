@@ -23,6 +23,9 @@ function NavBar() {
 // statusF: chatglobal sábado de manhã + domingo
 // statusG: pokedex por último.
 
+
+// mover Navbar pra c
+
   return (
     <>
     

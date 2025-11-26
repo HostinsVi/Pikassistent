@@ -21,11 +21,16 @@
 }
 
 .cooldown-box {
-  background: #555;
-  color: white;
   padding: 1rem 2rem;
-  border-radius: 12px;
   text-align: center;
+  background: #555;
+  border-radius: 12px;
+  color: white;
+}
+
+.cooldown-box > p {
+  height: auto;
+  padding: 5px;
 }
 
 .gacha-link {

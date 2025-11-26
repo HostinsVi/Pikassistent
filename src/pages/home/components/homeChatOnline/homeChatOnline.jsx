@@ -8,7 +8,7 @@ export default function homeChatOnline() {
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("chatMessages") || "[]");
-    setPreview(stored.slice(-3));
+    setPreview(stored.slice(0));
   }, []);
 
   return (
