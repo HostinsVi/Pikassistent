@@ -1,15 +1,17 @@
-import { logo, masterBall } from "../../assets/img";
+import { changeDarkTheme, defaultUser } from "../../assets/img";
 import "./header.css";
 
-function Header({ state }) {
+function Header({ state, userConnected }) {
+  const userImage = defaultUser;
   return (
     <header
       className={`header_container ${
         state === "relative" ? "relativeHeader" : null
       }`}
+      style={userConnected ? {justifyContent: "space-around"} : null}
     >
-      <img src={logo} alt="" />
-      <img src={masterBall} alt="" />
+      {userConnected ? <img src={userImage}/> : null}
+      <img src={changeDarkTheme} alt="change Theme" />
     </header>
   );
 }

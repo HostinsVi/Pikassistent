@@ -1,20 +1,258 @@
 .landingPage_container {
-    min-height: 100vh;
-    width: 100vw;
-    padding-bottom: 15vh; /* espaço para o footer fixo */
-    box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #c9deff;
+  color: black;
 }
 
 .landingPage_content {
-    height: 100%;
-    margin: 3vh 15%;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    gap: 3vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8vh;
+}
+
+
+.landingPage_container footer {
+  width: 100%;
+  height: auto;
+  padding: 2vh 1vw;
+  background: #58a8c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingPage_container footer p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #000000;
 }
 
 .p_container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 5.18vh;
+  margin-bottom: 8vh;
+}
+
+.textWhy_container {
+  display: flex;
+  border-radius: 15px;
+  border: solid white 5px;
+  max-width: 70vw;
+  overflow: hidden;
+}
+.textWhy_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.55vw;
+  padding: 1.82vw;
+  background-color: #fd7932;
+  border-right: solid #000000 4px;
+}
+.textWhy_content {
+  display: flex;
+  align-items: center;
+  padding: 1.82vw;
+  width: 62.45vw;
+  background-color: #46b9bc;
+}
+/* ---- */
+
+.presentation_container {
+  height: 92.8vh;
+  width: 100%;
+  background-image: url("../../assets/img/Bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding-top: 9.25vh;
+  padding: 9.25vh 13.9vw 0 13.9vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.presentation_container p,
+.presentation_container h2,
+.presentation_container button {
+  color: black;
+}
+
+.presentation_container button {
+  height: fit-content;
+  width: 100%;
+  background: #fd7932;
+  border-radius: 13.1537px;
+  border: none;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19.7305px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+/* ---- */
+.presentation_title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.38vh;
+}
+.presentation_title h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28.9381px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.presentation_title p {
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7844px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.presentation_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10.46vh;
+}
+
+/* ---- */
+
+.pikassistentIntro_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.22vh;
+  max-width: 35.41vw;
+}
+
+.pikassistentIntro_container h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23.6766px;
+  line-height: 29px;
+  align-items: center;
+
+  color: #000000;
+}
+
+.pikassistentIntro_container p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7844px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* ---- */
+
+.elementsInfo_container {
+  padding: 0 7.39vw 0 7.39vw;
+}
+
+/* ---- */
+
+.moreInfo_helper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- */
+
+.features_title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20.33px;
+  line-height: 25px;
+
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.features_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.51vh;
+}
+
+.features_container div {
+  display: flex;
+  align-items: center;
+  gap: 1.04vw;
+}
+
+.pokedexInfo img {
+  width: 70px;
+  height: 85px;
+  margin-right: 0.52vw;
+}
+
+.chatBotInfo img {
+  width: 76px;
+  height: 78px;
+}
+
+.chatGlobalInfo img {
+  width: 76px;
+  height: 78px;
+}
+
+@media (max-width: 800px) {
+  .pikassistentIntro_container {
+    max-width: 60vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .presentation_container {
+    padding: 11.01svh 10.23svw 0 10.23svw;
+  }
+
+  .pikassistentIntro_container {
+    max-width: 80vw;
+  }
+
+  .p_container {
+    flex-direction: column;
+  }
+
+  .textWhy_container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .textWhy_title {
+    width: 100%;
+    border-right: none;
+    border-bottom: solid #000000 3px;
+  }
+
+  .textWhy_content {
+    padding: 10px 20px 20px 20px;
+    width: 100%;
+  }
+
+  .presentation_container footer {
+    padding: 2svh 1svw;
+  }
 }

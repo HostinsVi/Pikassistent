@@ -13,6 +13,11 @@ import pokeballhome from './pokeballhome.png';
 import iahome from './IAhome.png';
 import chathome from './chathome.png';
 import gachahome from './gachahome.png';
+import changeDarkTheme from './changeDarkTheme.svg';
+import defaultUser from './defaultUser.svg';
+import downArrow from './chevron-down.svg'
+import background1 from './bg1.png'
+import background2 from './bg2.png'
 
 
 export { 
@@ -30,5 +35,10 @@ export {
     pokeballhome,
     iahome,
     chathome,
-    gachahome
+    gachahome,
+    changeDarkTheme,
+    defaultUser,
+    downArrow,
+    background1,
+    background2,
 };

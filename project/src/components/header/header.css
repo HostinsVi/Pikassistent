@@ -2,20 +2,13 @@
     width: 100vw;
     height: 7.2vh;
     display:flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    background: linear-gradient(to right,
-    rgb(240,168,41) 0%,     /* left yellow */
-    rgb(240,168,41) 1%,     /* start fading */
-    white 10%,              /* white under logo */
-    white 55%,              /* end white band */
-    rgb(240,168,41) 80%,    /* yellow resumes */
-    rgb(240,168,41) 100%    /* all yellow after */
-  );
+    background-color: #58A8C0;
 }
 
 .header_container img {
-    height: 6vh;
+    height: 4vh;
     margin: 15px;
     width: auto;
 }
