@@ -13,6 +13,7 @@ function ChatInput({ chatMessages, setChatMessages }){
     }
 
     function sendMessage(){
+        console.log("enviando mensagem: ", inputText);
         const newChatMessages = [
         ...chatMessages,
         {
@@ -20,9 +21,10 @@ function ChatInput({ chatMessages, setChatMessages }){
             sender: "user",
             id: crypto.randomUUID()
         }];
+        console.log("novas mensagens: ", newChatMessages);
 
         setChatMessages(newChatMessages);
-
+/*
         const response = Chatbot.getResponse(inputText);
         setChatMessages([
         ...newChatMessages,
@@ -31,9 +33,55 @@ function ChatInput({ chatMessages, setChatMessages }){
             sender: "robot",
             id: crypto.randomUUID()
         }]);
-
+*/
         setInputText('');
-    }
+
+        console.log("enviando para o backend");
+
+        fetch('http://localhost:7070/api/chat', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                message: inputText
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log(data.response);
+            setChatMessages([
+            ...newChatMessages,
+            {
+                message: data.response,
+                sender: "robot",
+                id: crypto.randomUUID()
+            }
+            ]);
+        } else {
+            setChatMessages([
+                ...newChatMessages,
+                {
+                    message: "Desculpe, estou com problemas para responder agora. tente novamente mais tarde.",
+                    sender: "robot",
+                    id: crypto.randomUUID()
+                }
+                ]);
+        }
+    })
+        .catch((error) => {
+            console.error('Error:', error);
+            setChatMessages([
+                ...newChatMessages,
+                {
+                    message: "erro ao conectar com o servidor. tente novamente mais tarde.",
+                    sender: "robot",
+                    id: crypto.randomUUID()
+                }
+                ]);
+        });
+}
 
     return(
         <div className='input-area'>

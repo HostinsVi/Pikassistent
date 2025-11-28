@@ -79,6 +79,8 @@ input:focus {
   position: fixed; /* fixa a área */
   bottom: 0; /* Posiciona na parte inferior */
   padding-bottom: 20px; /* Espaçamento inferior */
+  z-index: 100; /* Garante que fique acima de outros elementos */
+  background-color: #000;
 }
 
 /* MENSAGENS */
