@@ -15,10 +15,15 @@ import chathome from './chathome.png';
 import gachahome from './gachahome.png';
 import changeDarkTheme from './changeDarkTheme.svg';
 import defaultUser from './defaultUser.svg';
-import downArrow from './chevron-down.svg'
-import background1 from './bg1.png'
-import background2 from './bg2.png'
-
+import downArrow from './chevron-down.svg';
+import background1 from './bg1.png';
+import background2 from './bg2.png';
+import menuIcon from './menuIcon.svg';
+import globalchatIcon from './chatIcon.svg';
+import pokedexIcon from './pokedexIcon.svg';
+import chatBotIcon from './chatbotIcon.svg';
+import extraIcon from './extraIcon.svg';
+import homeIcon from './homeIcon.svg';
 
 export { 
     masterBall,
@@ -41,4 +46,10 @@ export {
     downArrow,
     background1,
     background2,
+    menuIcon,
+    globalchatIcon,
+    extraIcon,
+    chatBotIcon,
+    pokedexIcon,
+    homeIcon,
 };

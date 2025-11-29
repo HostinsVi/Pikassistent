@@ -1,4 +1,4 @@
-import { home, gachahome, pokeballhome, iahome, chathome } from '../../../../assets/img/index';
+import { homeIcon, globalchatIcon, pokedexIcon, chatBotIcon, extraIcon } from '../../../../assets/img/index';
 
 export const SidebarData = [
   {
@@ -6,41 +6,41 @@ export const SidebarData = [
     titleClass: "title-nav-bar",
     path: "/home",
     cName: "nav-container",
-    image: home,
+    image: homeIcon,
   },
   {
     title: "Chat Global",
     titleClass: "title-nav-bar",
     path: "/chatonline",
     cName: "nav-container",
-    image: chathome,    
+    image: globalchatIcon,    
   },
   {
     title: "Pokedex",
     titleClass: "title-nav-bar",
     path: "/pokedex",
     cName: "nav-container",
-    image: pokeballhome,
+    image: pokedexIcon,
   },
   {
     title: "ChatBot",
     titleClass: "title-nav-bar",
     path: "/chatbot",
     cName: "nav-container",
-    image: iahome,
+    image: chatBotIcon,
   },
   {
     title: "Gacha",
     titleClass: "title-nav-bar",
     path: "/gacha",
     cName: "nav-container",
-    image: gachahome
+    image: extraIcon
   },
   {
     title: "Ajuda",
     titleClass: "title-nav-bar",
     path: "https://github.com/HostinsVi/Pikassistent",
     cName: "nav-container",
-    image: gachahome
+    image: extraIcon
   }
 ]

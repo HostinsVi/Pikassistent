@@ -1,5 +1,5 @@
 .header_container {
-    width: 100vw;
+    width: 100%;
     height: 7.2vh;
     display:flex;
     justify-content: end;
@@ -7,9 +7,15 @@
     background-color: #58A8C0;
 }
 
-.header_container img {
+.changeTheme_button {
     height: 4vh;
     margin: 15px;
+    background-image: url('../../assets/img/changeDarkTheme.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border-radius: 50%;
     width: auto;
 }
 

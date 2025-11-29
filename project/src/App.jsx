@@ -42,7 +42,6 @@ const LoginLayout = () => {
 const HomeLayout = () => {
   return (
     <>
-      <NavBar />
       <Home />
     </>
   )
@@ -79,7 +78,7 @@ const ChatOnlineLayout = () => {
 const ChatBotLayout = () => {
   return (
     <>
-      <NavBar />
+      <Header state={"default"} userConnected={true}/>
       <Chatbot />
     </>
   )

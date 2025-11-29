@@ -1,17 +1,17 @@
-import { changeDarkTheme, defaultUser } from "../../assets/img";
+import NavBar from "../../pages/home/components/homeHeader/homeNavbar";
 import "./header.css";
 
 function Header({ state, userConnected }) {
-  const userImage = defaultUser;
   return (
     <header
       className={`header_container ${
         state === "relative" ? "relativeHeader" : null
       }`}
-      style={userConnected ? {justifyContent: "space-around"} : null}
+      style={userConnected ? {justifyContent: "space-between"} : null}
     >
-      {userConnected ? <img src={userImage}/> : null}
-      <img src={changeDarkTheme} alt="change Theme" />
+      {userConnected ? <NavBar />: null}
+      {/* {userConnected ? <img src={userImage}/> : null} */}
+      <button className="changeTheme_button"/>
     </header>
   );
 }

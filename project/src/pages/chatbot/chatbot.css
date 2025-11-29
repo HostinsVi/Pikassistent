@@ -22,15 +22,16 @@
 
 /* BACKGROUND */
 .chat-app {
-  background-image: url('src/assets/img/background-blue-1.jpeg'); /* Caminho para a imagem de fundo */
+  background-image: url('../../assets/img/Bg1.png'); /* Caminho para a imagem de fundo */
   background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
-  background-size: 412px 915px; /* Ajusta o tamanho da imagem */
+  background-size: cover;
+  background-position: center;
   min-height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
   padding: 20px; /* Espaçamento interno */
 }
 
 /* BOTÃO */
-button {
+.chat-button {
   width: 90px; /* Largura fixa */
   height: 45px; /* Altura fixa */
   background-color: #ff7a29; /* Cor de fundo laranja */
@@ -44,12 +45,12 @@ button {
   border: 2px solid #2b2b2b; /* Borda preta */
 }
 
-button:hover {
+.chat-button:hover {
   background-color: #9d4813; /* Cor de fundo mais escura ao passar o mouse */
 }
 
 /* INPUT */
-input {
+.input-container {
   width: 250px !important; /* Largura fixa */
   height: 40px; /* Altura fixa */
   margin-left: 1%; /* Espaçamento à esquerda */
@@ -64,7 +65,7 @@ input {
   flex-shrink: 0; /* impede que o input encolha */
 }
 
-input:focus {
+.input-container:focus {
   border-color: #fbfbfb; /* Borda branca ao focar */
   box-shadow: 0 0 4px rgba(255, 122, 41, 0.4); /* Sombra laranja suave ao focar */
 }
@@ -76,11 +77,11 @@ input:focus {
   justify-content: center; /* Centraliza os itens horizontalmente */
   gap: 10px; /* Espaçamento entre os itens */
   width: 100% !important; /* Ocupa toda a largura disponível */
+  padding: 20px;
   position: fixed; /* fixa a área */
   bottom: 0; /* Posiciona na parte inferior */
-  padding-bottom: 20px; /* Espaçamento inferior */
   z-index: 100; /* Garante que fique acima de outros elementos */
-  background-color: #000;
+  background-color: #2e86ab;
 }
 
 /* MENSAGENS */

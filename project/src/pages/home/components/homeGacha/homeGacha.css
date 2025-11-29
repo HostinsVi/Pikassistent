@@ -34,8 +34,8 @@
 }
 
 .gacha-link {
-  color: cyan;
-  text-decoration: none;
+  color: blue;
+  text-decoration: underline;
 }
 
 .reward-display {
