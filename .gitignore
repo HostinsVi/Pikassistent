@@ -1,31 +1,113 @@
-#Referente ao frontend
-#Logs
+# === ARQUIVOS SENSÍVEIS E CREDENCIAIS ===
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*/.env
+*/.env.*
+**/.env
+**/.env.*
+
+# Chaves de API e configurações sensíveis
+**/config/keys.js
+**/config/prod.js
+**/*config*.json
+**/*credentials*.json
+**/*secret*.json
+firebase-config.js
+firebase-credentials.json
+
+# === DEPENDÊNCIAS ===
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm
+.yarn-integrity
+.pnp
+.pnp.js
+
+# === BUILD E DIST ===
+# Frontend (Vite/React)
+project/dist/
+project/dist-ssr/
+project/.vite/
+project/build/
+
+# Backend builds
+API/dist/
+API/build/
+*.tsbuildinfo
+
+# === LOGS ===
+logs
+*.log
 project/logs
 project/.log
-project/npm-debug.log
-project/yarn-debug.log*
-project/yarn-error.log*
-project/pnpm-debug.log*
-project/lerna-debug.log*
 
-project/node_modules
-project/dist
-project/dist-ssr
+# === CACHE E TEMPORÁRIOS ===
+.cache/
+.temp/
+.tmp/
 project/.local
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-#Editor directories and files
-project/.vscode/
-project/!.vscode/extensions.json
-project/.idea
-project/.DS_Store
-project/.suo
-project/.ntvs*
-project/.njsproj
-project/.sln
-project/*.sw?
+# === EDITORES E IDEs ===
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 
-#Referente ao backend
-API/node_modules
-API/.env
+# JetBrains IDEs
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
 
-node_modules/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# === SISTEMA OPERACIONAL ===
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# === TESTES ===
+coverage/
+*.lcov
+.nyc_output
+test-results/
+playwright-report/
+
+# === OUTROS ===
+*.zip
+*.tar.gz
+*.rar

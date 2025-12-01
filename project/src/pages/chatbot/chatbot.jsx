@@ -2,7 +2,6 @@
 import React from "react";
 import masterBall from "../../assets/img/masterBall.png";
 import pika from "../../assets/img/pika.png";
-import logo from "../../assets/img/logo.jpeg";
 import "./chatbot.css";
 
 function ChatInput({ chatMessages, setChatMessages }) {
@@ -184,12 +183,6 @@ function ChatApp() {
   return (
     <>
       <div className="chat-app">
-        <h1>
-          <img
-            src={logo}
-            style={{ width: "300px", height: "auto", verticalAlign: "middle" }}
-          />
-        </h1>
         <ChatMessages chatMessages={chatMessages} />
       </div>
       <ChatInput

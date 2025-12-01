@@ -28,7 +28,8 @@ const groq = new Groq({
 let messages = [
   {
     "id": crypto.randomUUID(),
-    "text": "Oi, tudo bem?"
+    "text": "Oi, tudo bem?",
+    "senderName": "aRandonGuy"
   }
 ]
 
@@ -42,15 +43,15 @@ app.get("/api/getMessage", (req, res) => {
 
 app.post("/api/postMessage", (req, res) => {
   try {
-    const {id, message} = req.body;
-    if(!id || !message) {
+    const {id, message, senderName} = req.body;
+    if(!id || !message || !senderName) {
       return res.status(400).json({
         success: false,
         error: "id ou mensagem faltando."
       });
     }
 
-    messages.push({ id, text: message });
+    messages.push({ id, text: message, senderName });
     res.status(200).json({success:true});
   }
   catch(error) {
@@ -66,7 +67,7 @@ app.post("/api/chat", async (req, res) => {
     console.log("🔍 Body keys:", Object.keys(req.body));
 
     const { message } = req.body;
-    console.log("🔍 Message:", message);
+    console.log("🔍 Message:", message);  
   
 
     if(!message) {

@@ -6,13 +6,13 @@ import { signInWithEmailAndPassword, signInWithPopup, createUserWithEmailAndPass
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCoAszHtDNMyLKM6ccSFLrdQSY2tEFkYYg",
-  authDomain: "pikassistent.firebaseapp.com",
-  projectId: "pikassistent",
-  storageBucket: "pikassistent.firebasestorage.app",
-  messagingSenderId: "126651432215",
-  appId: "1:126651432215:web:4a161828cfae6533df8b52",
-  measurementId: "G-8B3JXM47J4"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 

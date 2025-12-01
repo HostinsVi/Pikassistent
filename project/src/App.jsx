@@ -69,7 +69,7 @@ const SignUpLayout = () => {
 const ChatOnlineLayout = () => {
   return (
     <>
-      <NavBar />
+      <Header state={'default'} userConnected={true}/>
       <ChatOnline />
     </>
   )
