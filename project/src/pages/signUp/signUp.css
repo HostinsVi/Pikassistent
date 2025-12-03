@@ -1,95 +1,145 @@
-
-/* body */
+/* Container principal */
 .signup-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  width: 100%;
   background-image: url("../../assets/img/background-blue-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: black;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* div com o form */
 .signup-form-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 60%;
-  padding: 5px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* A FAZER:
-
-- Mouse desaparecendo toda vez que tento clicar no botão de sign up
-  após escrever algo nos campos de registro */
-
-
-
-/* div com os menus */
+/* Formulário */
 .signup-form {
   display: flex;
   flex-direction: column;
-
+  gap: 20px;
 }
 
-/* menu de botões */
+/* Container de botões */
 .signup-form-btns-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 15%;
-  gap: 10px;
-
-  font-size: small;
+  gap: 15px;
+  font-size: 14px;
   text-align: center;
 }
 
+/* Botão do Google */
 .signup-google-btn {
-  width: auto;
-  background-color: lightblue;
-  color: black;
+  width: 100%;
+  padding: 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+.signup-google-btn:hover {
+  background-color: #357ae8;
+}
 
-
+/* Botão de Sign Up */
 .signup-signup-btn {
-  width: 80%;
-  height: auto;
-  background-color: orange;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff9800;
   color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.signup-login-btn {
-  color: blue;
+.signup-signup-btn:hover {
+  background-color: #f57c00;
+}
+
+/* Link de login */
+.signup-login-link {
+  color: #2196f3;
   text-decoration: underline;
+  font-size: 14px;
+  transition: color 0.3s;
 }
 
-/* menu de inputs */
+.signup-login-link:hover {
+  color: #1976d2;
+}
+
+/* Container de inputs */
 .signup-form-inputs-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-/* menu de inputs de registro */
-
-.signup-input-container, .signup-select-container {
-  height: 10%;
-  margin: 0;
-}
-
-.signup-select-container {
-  width: 92%;
-  /* n sei oq fazer sobre os inputs se recusarem a ocupar a linha toda :(  */
-}
-
+/* Labels */
 .signup-label {
-
-
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
 }
 
+/* Inputs */
+.signup-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
+.signup-input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
 
+/* Select */
+.signup-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.signup-select:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+/* Texto "Or fill below" */
+.signup-form-btns-container span {
+  color: #666;
+  font-size: 12px;
+  margin-top: 5px;
+}

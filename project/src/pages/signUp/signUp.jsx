@@ -21,10 +21,10 @@ function SignUp() {
             </button>
             <span>Or fill below</span>
           </div>
-          <div className={"signup-form-inputs-container"}>
+          <div className="signup-form-inputs-container">
             <label className="signup-label">Email:</label>
             <input
-              className="signup-input-container"
+              className="signup-input"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -32,7 +32,7 @@ function SignUp() {
             />
             <label className="signup-label">Username:</label>
             <input
-              className="signup-input-container"
+              className="signup-input"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -41,7 +41,7 @@ function SignUp() {
 
             <label className="signup-label">Password:</label>
             <input
-              className="signup-input-container"
+              className="signup-input"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -50,7 +50,7 @@ function SignUp() {
 
             <label className="signup-label">Team:</label>
             <select
-              className="signup-select-container"
+              className="signup-select"
               value={team}
               onChange={(e) => setTeam(e.target.value)}
             >
@@ -61,19 +61,17 @@ function SignUp() {
             </select>
           </div>
           <div className="signup-form-btns-container">
-            <Link to="#">
-              <button
-                type="button"
-                className="signup-signup-btn"
-                onClick={() =>
-                  handleSignUp(email, username, password, team, idNumber)
-                }
-              >
-                Sign Up
-              </button>
-            </Link>
-            <Link to="/login" className="signup-login-btn">
-              <span>or return to login page</span>
+            <button
+              type="button"
+              className="signup-signup-btn"
+              onClick={() =>
+                handleSignUp(email, username, password, team, idNumber)
+              }
+            >
+              Sign Up
+            </button>
+            <Link to="/login" className="signup-login-link">
+              or return to login page
             </Link>
           </div>
         </form>
@@ -83,11 +81,3 @@ function SignUp() {
 }
 
 export default SignUp;
-
-// A FAZER:
-
-// - botão return to login page não está com o efeito de hover funcionando.
-// - background ta sem a imagem original.
-// - cores a serem ajustadas.
-
-

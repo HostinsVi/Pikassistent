@@ -1,90 +1,180 @@
-/* body */
+/* Reset e configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principal */
 .login-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position:relative; */
+  min-height: 100vh;
+  width: 100%;
   background-image: url("../../assets/img/background-blue-1.jpeg");
-  color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
 }
 
-
-/* div com o form */
+/* Container do formulário */
 .login-form-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 50%;
-  padding: 10px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e1e1e1;
 }
 
-/* div com os menus */
+/* Formulário */
 .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  gap: 20px;
 }
 
 h1 {
-  margin: 10px;
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 600;
 }
 
-h1, label {
-  width: auto;
-  height: auto;
-  font-size: medium;
+label {
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 5px;
+  align-self: flex-start;
 }
 
-/* menu de inputs */
+/* Container dos inputs */
 .login-form-inputs-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  height: 49%;
-
+  width: 100%;
+  gap: 15px;
 }
 
+/* Estilos dos inputs */
 .login-input-container {
-  height: 15%;
-  margin: 0;
-}
-
-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
   background-color: white;
-  color: black;
+  color: #333;
 }
 
-/* menu de botões */
+.login-input-container:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.login-input-container::placeholder {
+  color: #95a5a6;
+}
+
+/* Container dos botões */
 .login-form-btns-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 49%;
-  gap: 20px;
-  font-size: small;
-
+  width: 100%;
+  gap: 15px;
+  margin-top: 10px;
 }
 
+/* Botão de login */
 .login-login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-login-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.login-login-btn:active {
+  transform: translateY(0);
+}
+
+/* Link de cadastro */
+.login-signup-btn {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.login-signup-btn:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Botão do Google */
+.login-google-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 15%;
-  
+  gap: 10px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.login-signup-btn {
-  height: auto;
- color: blue;
- text-decoration: underline;
+.login-google-btn:hover {
+  background-color: #357ae8;
+  transform: translateY(-1px);
 }
 
-.login-google-btn {
-  width: auto;
-  background-color: lightblue;
-  color: grey;
+.login-google-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .login-form-container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .login-login-btn,
+  .login-google-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
