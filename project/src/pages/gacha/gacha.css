@@ -1,12 +1,26 @@
 .gacha-home {
+  height: 82.8vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  position: fixed;
   align-items: center;
-  padding: 2rem;
-  overflow-y: scroll;
-  background-image: url("../../assets/img/background-blue-1.jpeg");
-  color: white;
+  padding: 5vh 0;
+
+  background-image: url("../../assets/img/Bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.gacha-home_loggedOff {
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
 
 h1 {

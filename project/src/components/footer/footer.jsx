@@ -1,8 +1,9 @@
 import './footer.css';
 
-function Footer() {
+function Footer({state}) {
+  
   return (
-      <footer>
+      <footer className={state === 'absolute' ? 'absoluteFooter' : null}>
         <p>© 2025 Pikassistent, Pokémon and Pokémon character names are trademarks of Nintendo.</p>
       </footer>
   )

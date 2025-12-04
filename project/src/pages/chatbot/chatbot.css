@@ -51,18 +51,18 @@
 
 /* INPUT */
 .input-container {
-  width: 250px !important; /* Largura fixa */
   height: 40px; /* Altura fixa */
-  margin-left: 1%; /* Espaçamento à esquerda */
-  margin-right: 1%; /* Espaçamento à direita */
+  width: 40vw; /* Largura fixa */
+  max-width: 400px; /* Largura máxima */
   border: 2px solid #ccc; /* Borda cinza clara */
   border-radius: 6px; /* Bordas arredondadas */
   font-size: 15px; /* Tamanho da fonte */
-  color: #b0b0b0; /* Cor do texto cinza claro */
+  background-color: #ffffff;
+  color: #000000; /* Cor do texto cinza claro */
   outline: none; /* Remove o contorno padrão */
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para borda e sombra */
-  max-width: 300px; /* Largura máxima */
   flex-shrink: 0; /* impede que o input encolha */
+  padding: 0 10px; 
 }
 
 .input-container:focus {

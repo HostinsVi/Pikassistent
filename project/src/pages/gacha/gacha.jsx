@@ -31,13 +31,13 @@ function Gacha() {
 
   if (!user)
     return (
-      <div className="gacha-home">
+      <div className="gacha-home gacha-home_loggedOff">
         <p>You must be logged in to see your inventory.</p>
       </div>
     );
 
   return (
-    <div className="gacha-home">
+    <main className="gacha-home">
       <h1>Your Card Inventory</h1>
 
       {cards.length === 0 ? (
@@ -59,7 +59,7 @@ function Gacha() {
             ))}
         </div>
       )}
-    </div>
+    </main>
   );
 }
 

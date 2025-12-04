@@ -5,7 +5,7 @@ function Header({ state, userConnected }) {
   return (
     <header
       className={`header_container ${
-        state === "relative" ? "relativeHeader" : null
+        state === "absolute" ? "absoluteHeader" : null
       }`}
       style={userConnected ? {justifyContent: "space-between"} : null}
     >

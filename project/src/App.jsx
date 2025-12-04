@@ -31,9 +31,9 @@ import PokemonDetail from './pages/pokemonDetail/pokemonDetail.jsx'
 const LoginLayout = () => {
   return (
     <>
-      <Header />
+      <Header state={'absolute'} userConnected={false}/>
       <Login />
-      <Footer />
+      <Footer state={'absolute'}/>
     </>
   )
 }
@@ -59,9 +59,9 @@ const RankingLayout = () => {
 const SignUpLayout = () => {
   return (
     <>
-      <Header />
+      <Header state={'absolute'} userConnected={false}/>
       <SignUp />
-      <Footer />
+      <Footer state={'absolute'}/>
     </>
   )
 }
@@ -87,7 +87,7 @@ const ChatBotLayout = () => {
 const GachaLayout = () => {
   return (
     <>
-      <NavBar />
+      <Header state={'default'} userConnected={true}/>
       <Gacha />
     </>
   )

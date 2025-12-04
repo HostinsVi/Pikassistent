@@ -1,9 +1,12 @@
 footer {
   width: 100%;
-  height: 5%;
+  height: 5vh;
+  display: flex;
   padding-top: 5px;
   text-align: center;
-  font-size:xx-small;
+  font-size:small;
+  align-items: center;
+  justify-content: center;
   background-color: black;
   color: lightgrey;
 }
@@ -11,4 +14,10 @@ footer {
 footer > p { 
   margin: 0;
   padding: 5px;
+}
+
+.absoluteFooter { 
+  position: absolute; 
+  bottom: 0;
+  left: 0;
 }

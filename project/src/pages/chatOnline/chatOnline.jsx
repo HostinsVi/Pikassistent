@@ -62,7 +62,7 @@ export default function ChatOnline() {
   useEffect(() => {
     getMessage();
 
-    // Atualização automática das mensagens a cada 3 segundos
+    // Atualização automática das mensagens a cada 5 segundos
     const interval = setInterval(() => {
       getMessage();
     }, 5000);

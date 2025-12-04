@@ -8,8 +8,8 @@
 }
 
 .changeTheme_button {
-    height: 4vh;
-    margin: 15px;
+    height: 40px;
+    margin-right: 15px;
     background-image: url('../../assets/img/changeDarkTheme.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -19,6 +19,8 @@
     width: auto;
 }
 
-.relativeHeader {
-    position: relative;
+.absoluteHeader {
+    position: absolute;
+    top: 0;
+    left: 0; 
 }
