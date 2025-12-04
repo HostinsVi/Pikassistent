@@ -147,6 +147,60 @@ function SignUp() {
             <button type="button" className="signup-google-btn">
               Continuar com o Google
             </button>
+            <span>Or fill below</span>
+          </div>
+          <div className="signup-form-inputs-container">
+            <label className="signup-label">Email:</label>
+            <input
+              className="signup-input"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your Email"
+            />
+            <label className="signup-label">Username:</label>
+            <input
+              className="signup-input"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Enter your Username"
+            />
+
+            <label className="signup-label">Password:</label>
+            <input
+              className="signup-input"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Eles que lutem."
+            />
+
+            <label className="signup-label">Team:</label>
+            <select
+              className="signup-select"
+              value={team}
+              onChange={(e) => setTeam(e.target.value)}
+            >
+              <option value="">Select your Team</option>
+              <option value="Red">Red</option>
+              <option value="Yellow">Yellow</option>
+              <option value="Blue">Blue</option>
+            </select>
+          </div>
+          <div className="signup-form-btns-container">
+            <button
+              type="button"
+              className="signup-signup-btn"
+              onClick={() =>
+                handleSignUp(email, username, password, team, idNumber)
+              }
+            >
+              Sign Up
+            </button>
+            <Link to="/login" className="signup-login-link">
+              or return to login page
+            </Link>
           </div>
         </form>
       </section>
@@ -155,9 +209,3 @@ function SignUp() {
 }
 
 export default SignUp;
-
-// A FAZER:
-
-// - botão return to login page não está com o efeito de hover funcionando.
-// - background ta sem a imagem original.
-// - cores a serem ajustadas.

@@ -1,128 +1,146 @@
-/* body */
+/* Container principal */
 .signup-container {
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/img/Bg2.png");
-  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/img/background-blue-1.jpeg");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   color: black;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  /* div com o form */
-  .signup-form-container {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    height: fit-content;
-    padding: 3.75vh 1.59vw 2.95vh 1.59vw;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 30px;
-    
-    @media (max-width: 600px) {
-      padding: 35px 20px 26px 20px; 
-    }
-  }
+/* div com o form */
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
 
-  /* A FAZER:
-  
-  - Mouse desaparecendo toda vez que tento clicar no botão de sign up
-  após escrever algo nos campos de registro */
+/* Formulário */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-  /* form com os menus */
-  .signup-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+/* Container de botões */
+.signup-form-btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  text-align: center;
+}
 
-    legend {
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 25px;
-      text-align: center;
+/* Botão do Google */
+.signup-google-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-      color: #000000; 
-    }
-  }
+.signup-google-btn:hover {
+  background-color: #357ae8;
+}
 
-  /* menu de botões */
-  .signup-form-btns-container {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+/* Botão de Sign Up */
+.signup-signup-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff9800;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-    font-size: small;
-    text-align: center;
-  }
+.signup-signup-btn:hover {
+  background-color: #f57c00;
+}
 
-  .signup-google-btn {
-    width: 100%;
-    background-color: lightblue;
-    color: black;
-  }
+/* Link de login */
+.signup-login-link {
+  color: #2196f3;
+  text-decoration: underline;
+  font-size: 14px;
+  transition: color 0.3s;
+}
 
-  .signup-signup-btn {
-    width: 100%;
-    height: auto;
-    background-color: #fd7932;
-    color: white;
-  }
+.signup-login-link:hover {
+  color: #1976d2;
+}
 
-  .signup-signup-btn:hover {
-    background-color: #d7723b;
-  }
+/* Container de inputs */
+.signup-form-inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-  .signup-login-btn {
-    color: blue;
-    text-decoration: underline;
-  }
+/* Labels */
+.signup-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
 
-  /* menu de inputs */
-  .signup-form-inputs-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.63vh;
-    border: none;
-  }
+/* Inputs */
+.signup-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.signup-input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
 
-    label {
-      color: #000000;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-  }
-  /* menu de inputs de registro */
+/* Select */
+.signup-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
 
-  .signup-input-container,
-  .signup-select-container {
-    width: 324px;
-    padding: 9px;
-    border-radius: 5px;
-    height: 15%;
-    margin: 0;
-    border: solid #000000 1px;
+.signup-select:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
 
-    background-color: white;
-    color: black;
-  }
-
-  .signup-select-container {
-    width: 100%;
-    /* n sei oq fazer sobre os inputs se recusarem a ocupar a linha toda :(  */
-  }
+/* Texto "Or fill below" */
+.signup-form-btns-container span {
+  color: #666;
+  font-size: 12px;
+  margin-top: 5px;
 }

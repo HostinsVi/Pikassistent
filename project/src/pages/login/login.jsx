@@ -35,7 +35,8 @@ function Login() {
               />
             </div>
             <Link to="/SignUp" className="login-signup-btn">
-              <span>Não tem uma conta? cadastre-se!</span>
+              <span>Não tem uma conta? </span><p></p>
+              <span>cadastre-se!</span>
             </Link>
           </fieldset>
           <div className="login-form-btns-container">
