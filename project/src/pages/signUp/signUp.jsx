@@ -109,7 +109,7 @@ function SignUp() {
               <input
                 className="signup-input-container"
                 type="password"
-                value={confPassword}
+                  value={confPassword}
                 onChange={(e) => setConfPassword(e.target.value)}
                 placeholder="digite novamente a sua senha"
               />
@@ -147,9 +147,9 @@ function SignUp() {
             <button type="button" className="signup-google-btn">
               Continuar com o Google
             </button>
-            <span>Or fill below</span>
           </div>
-          <div className="signup-form-inputs-container">
+            {/* <span>Or fill below</span> */}
+          {/* <div className="signup-form-inputs-container">
             <label className="signup-label">Email:</label>
             <input
               className="signup-input"
@@ -201,7 +201,7 @@ function SignUp() {
             <Link to="/login" className="signup-login-link">
               or return to login page
             </Link>
-          </div>
+          </div> */}
         </form>
       </section>
     </main>

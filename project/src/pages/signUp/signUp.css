@@ -6,7 +6,7 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background-image: url("../../assets/img/background-blue-1.jpeg");
+  background-image: url("../../assets/img/Bg1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,28 +19,41 @@
 .signup-form-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 400px;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  height: fit-content;
+  padding: 3.75vh 1.59vw 2.95vh 1.59vw;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
 /* Formulário */
 .signup-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
+}
+
+.signup-form legend {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
 }
 
 /* Container de botões */
 .signup-form-btns-container {
+  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  font-size: 14px;
+  font-size: small;
   text-align: center;
 }
 
@@ -48,8 +61,8 @@
 .signup-google-btn {
   width: 100%;
   padding: 12px;
-  background-color: #4285f4;
-  color: white;
+  background-color: lightblue;
+  color: black;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -58,7 +71,7 @@
 }
 
 .signup-google-btn:hover {
-  background-color: #357ae8;
+  background-color: #87ceeb;
 }
 
 /* Botão de Sign Up */
@@ -79,14 +92,15 @@
 }
 
 /* Link de login */
-.signup-login-link {
-  color: #2196f3;
+.signup-login-btn {
+  color: blue;
   text-decoration: underline;
   font-size: 14px;
   transition: color 0.3s;
+  text-align: center;
 }
 
-.signup-login-link:hover {
+.signup-login-btn:hover {
   color: #1976d2;
 }
 
@@ -94,48 +108,48 @@
 .signup-form-inputs-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  gap: 1.63vh;
+  border: none;
 }
 
-/* Labels */
-.signup-label {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 5px;
+/* Grupo de input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-/* Inputs */
-.signup-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-size: 14px;
+.input-group label {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.signup-input:focus {
-  outline: none;
-  border-color: #2196f3;
-  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
-}
-
-/* Select */
-.signup-select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-size: 14px;
+/* Inputs e selects */
+.signup-input-container,
+.signup-select-container {
+  width: 324px;
+  padding: 9px;
+  border-radius: 5px;
+  margin: 0;
+  border: solid #000000 1px;
   background-color: white;
+  color: black;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.signup-select-container {
+  width: 100%;
   cursor: pointer;
 }
 
-.signup-select:focus {
+.signup-input-container:focus,
+.signup-select-container:focus {
   outline: none;
-  border-color: #2196f3;
-  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Texto "Or fill below" */
@@ -143,4 +157,59 @@
   color: #666;
   font-size: 12px;
   margin-top: 5px;
+}
+
+/* Compatibilidade com classes antigas do JSX */
+.signup-label {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.signup-input {
+  width: 324px;
+  padding: 9px;
+  border-radius: 5px;
+  margin: 0;
+  border: solid #000000 1px;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.signup-input:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.signup-select {
+  width: 324px;
+  padding: 9px;
+  border-radius: 5px;
+  margin: 0;
+  border: solid #000000 1px;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.signup-select:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.signup-login-link {
+  color: blue;
+  text-decoration: underline;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.signup-login-link:hover {
+  color: #1976d2;
 }
