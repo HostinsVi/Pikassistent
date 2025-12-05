@@ -7,9 +7,7 @@
 .env.production.local
 .env.*.local
 */.env
-*/.env.*
 **/.env
-**/.env.*
 
 # Chaves de API e configurações sensíveis
 **/config/keys.js
