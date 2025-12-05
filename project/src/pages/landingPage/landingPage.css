@@ -13,7 +13,6 @@
   gap: 8vh;
 }
 
-
 .landingPage_container footer {
   height: auto;
   padding: 2vh 0vw;
@@ -66,8 +65,8 @@
 /* ---- */
 
 .presentation_container {
-  height: 82.8vh;
-  
+  height: 92.8vh;
+
   background-image: url("../../assets/img/Bg1.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,7 +94,7 @@
   font-weight: 700;
   font-size: 19.7305px;
   line-height: 24px;
-   text-align: center;
+  text-align: center;
   color: #000000;
 }
 
@@ -174,7 +173,48 @@
   align-items: center;
 }
 
-/* ---- */
+/* --------- features ------------- */
+
+.feature_card {
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  width: 85.22vw;
+  border: solid white 5px;
+  border-radius: 20px;
+}
+
+.feature_card .feature_icon {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 100%;
+  padding: 0 20px 0 15px;
+  width: 20%;
+  border-radius: 20px 0 0 20px;
+  background-color: #2c2a3e;
+  border-right: solid black 5px;
+}
+
+.feature_card .feature_icon h3 {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.feature_card .feature_content {
+  height: 100%;
+  width: 80%;
+  padding: 3vh 25px;
+  display: flex;
+  align-items: center;
+  background-color: #58a8c0;
+  border-radius: 0 20px 20px 0;
+}
+
+.feature_card .feature_content p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 
 .features_title {
   font-style: normal;
@@ -192,12 +232,6 @@
   gap: 3.51vh;
 }
 
-.features_container div {
-  display: flex;
-  align-items: center;
-  gap: 1.04vw;
-}
-
 .pokedexInfo img {
   width: 70px;
   height: 85px;
@@ -213,6 +247,42 @@
   width: 76px;
   height: 78px;
 }
+
+/* --------------- cta buttons -------------- */
+
+.cta_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 20vh;
+}
+
+.cta_buttons .primary_cta {
+  border-radius: 50px;
+}
+
+.cta_buttons .primary_cta:hover {
+  animation: forwards primaryCta_transition 0.25s;
+}
+
+.cta_buttons .primary_cta:not(:hover) {
+  animation: forwards primaryCta_reverseTransition 0.25s;
+}
+
+.cta_buttons .secondary_cta {
+  border-radius: 50px;
+}
+
+.cta_buttons .secondary_cta:hover {
+  animation: forwards secondaryCta_transition 0.25s;
+}
+
+.cta_buttons .secondary_cta:not(:hover) {
+  animation: forwards secondaryCta_reverseTransition 0.25s;
+}
+
+
 
 @media (max-width: 800px) {
   .pikassistentIntro_container {
@@ -251,5 +321,81 @@
 
   .presentation_container footer {
     padding: 2svh 1svw;
+  }
+}
+
+@media (max-width: 1360px) {
+  .feature_card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .feature_card .feature_icon {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    border-bottom: solid #000000 4px;
+    border-right: none;
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .feature_card .feature_content {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+/* ------------- animações ------------ */
+
+@keyframes primaryCta_transition {
+  from {
+    background-color: #fd7932;
+    border: solid black 2px;
+    color: black;
+  }
+  to {
+    background-color: black;
+    border: solid #fd7932 4px;
+    color: #fd7932;
+  }
+}
+
+@keyframes primaryCta_reverseTransition {
+  from {
+    background-color: black;
+    border: solid #fd7932 4px;
+    color: #fd7932;
+  }
+  to {
+    background-color: #fd7932;
+    border: solid black 2px;
+    color: black;
+  }
+}
+
+@keyframes secondaryCta_transition {
+  from {
+    background-color: #fd7932;
+    border: solid black 2px;
+    color: black;
+  }
+  to {
+    background-color: black;
+    border: solid #fd7932 4px;
+    color: #fd7932;
+  }
+}
+
+@keyframes secondaryCta_reverseTransition {
+  from {
+    background-color: black;
+    border: solid #fd7932 4px;
+    color: #fd7932;
+  }
+  to {
+    background-color: #fd7932;
+    border: solid black 2px;
+    color: black;
   }
 }
