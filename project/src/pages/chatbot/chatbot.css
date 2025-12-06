@@ -20,7 +20,7 @@
   flex-shrink: 0; /* impede que as imagens encolham */
 }
 
-/* BACKGROUND */
+/* FUNDO DO CHAT */
 .chat-app {
   background-image: url('../../assets/img/Bg1.png'); /* Caminho para a imagem de fundo */
   background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
@@ -28,6 +28,7 @@
   background-position: center;
   min-height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
   padding: 20px; /* Espaçamento interno */
+  margin-bottom: 7.5vh; /* Espaço para a área de input fixa */
 }
 
 /* BOTÃO */
@@ -63,6 +64,7 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para borda e sombra */
   flex-shrink: 0; /* impede que o input encolha */
   padding: 0 10px; 
+  height: 7.5vh; /* Altura fixa para corresponder à área de input */
 }
 
 .input-container:focus {

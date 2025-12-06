@@ -153,29 +153,7 @@ function ChatMessages({ chatMessages }) {
 }
 
 function ChatApp() {
-  const [chatMessages, setChatMessages] = React.useState([
-    {
-      message: "Ola chatbot",
-      sender: "user",
-      id: "1",
-    },
-    {
-      message: "Ola humano",
-      sender: "robot",
-      id: "2",
-    },
-    {
-      message: "qual o melhor inicial da priemeira geracao?",
-      sender: "user",
-      id: "3",
-    },
-    {
-      message:
-        "Bulbasauro, pois ele aprende ataques do tipo grama e veneno, que sao eficazes contra os outros dois iniciais.",
-      sender: "robot",
-      id: "4",
-    },
-  ]);
+  const [chatMessages, setChatMessages] = React.useState([]);
   //const [chatMessages, setChatMessages] = array;
   //const chatMessages = array[0];
   //const setChatMessages = array[1];
