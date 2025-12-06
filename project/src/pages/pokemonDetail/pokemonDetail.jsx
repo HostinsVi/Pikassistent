@@ -64,7 +64,13 @@ function PokemonDetail() {
           </h1>
           <div className="pokemon-detail-image-container">
           <img
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${id}.gif`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`}
+                      
+            alt={pokemon.name}
+            className="pokemon-image"
+          />
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${id}.gif`}
                       
             alt={pokemon.name}
             className="pokemon-image"
@@ -72,21 +78,21 @@ function PokemonDetail() {
             </div>
           <div className="detail-section">
             <h2>Types</h2>
-            <div style={{ display: "flex", gap: "12px", marginTop: "12px", justifyContent: "center" }}>
-              {pokemon.types.map((type) => (
-                <span
-                  key={type.type.name}
-                  style={{
-                    padding: "8px 20px",
-                    borderRadius: "20px",
-                    
-                    textTransform: "capitalize",
-                    fontWeight: "bold"
-                  }}
-                >
-                  {type.type.name}
-                </span>
-              ))}
+            <div className="type-container">
+              {pokemon.types.map((type) => {
+                const parts = type.type.url ? type.type.url.split("/").filter(Boolean) : [];
+                const typeId = parts.length ? parts[parts.length - 1] : type.type.name;
+
+                return (
+                  <span key={type.type.name} >
+                    <img
+                      className="type-badge"
+                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/types/generation-ix/scarlet-violet/Tera/${typeId}.png`}
+                      alt={type.type.name}
+                    />
+                  </span>
+                );
+              })}
             </div>
           </div>
 
@@ -116,7 +122,7 @@ function PokemonDetail() {
                   <div style={{ background: "#e0e0e0", borderRadius: "8px", height: "12px", overflow: "hidden" }}>
                     <div
                       style={{
-                        background: stat.base_stat > 100 ? "#4caf50" : stat.base_stat > 50 ? "#ff9800" : "#f44336",
+                        background: stat.base_stat > 100 ? "#4caf50" : stat.base_stat > 50 ? "#ee8329" : "#cd5241",
                         height: "100%",
                         width: `${(stat.base_stat / 255) * 100}%`,
                         transition: "width 0.3s ease"

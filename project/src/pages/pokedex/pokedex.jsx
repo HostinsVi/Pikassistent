@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 function Pokedex() {
   const navigate = useNavigate();
   const [pokemons, setPokemons] = useState([]);
+  const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,35 +30,60 @@ function Pokedex() {
       <Header state="default" />
       <main className="pokedex-main">
         <h1>Pokedex</h1>
+
+        <div className="menu">
+        <button 
+          onClick={() => navigate("/")}
+        >
+          ←Voltar
+        </button>
+          <input
+            type="search"
+            placeholder="Pesquisar por nome..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="search"
+          />
+        </div>
         {loading ? (
           <p>Carregando pokémons...</p>
         ) : (
-          <div className="pokemon-list-wrapper" style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
-            {pokemons.map((pokemon, idx) => {
+          <div className="pokemon-list-wrapper" >
+            {(() => {
+              const filtered = query
+                ? pokemons.filter((p) => p.name.toLowerCase().includes(query.toLowerCase()))
+                : pokemons;
+
+              if (filtered.length === 0) {
+                return <p>Nenhum Pokémon encontrado.</p>;
+              }
+
+              return filtered.map((pokemon, idx) => {
               const pokemonId = pokemon.url.split("/")[6];
               return (
                 <div 
                   key={pokemon.name} 
                   className="list-item"
                   onClick={() => navigate(`/pokemon/${pokemonId}`)}
-                  style={{ cursor: "pointer" }}
+                  
                 >
                   <div className="number-wrap">
                     <p className="pokemon-number">#{(pokemonId)}</p>
                   </div>
                   <div className="img-wrap">
                     <img
-                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemonId}.gif`}
+                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemonId}.gif`}
                       alt={pokemon.name}
                       className="pokeimg"
                     />
                   </div>
                   <div className="name-wrap">
-                    <p className="pokemon-name" style={{ textTransform: "capitalize" }}>{pokemon.name}</p>
+                    <p className="pokemon-name" >{pokemon.name}</p>
                   </div>
                 </div>
               );
-            })}
+              });
+            })()}
           </div>
         )}
       </main>

@@ -1,3 +1,17 @@
+.menu {
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.search{
+    padding: 8px 12px;
+    width: 260px;
+    border-radius: 8px;
+    border: 1px solid #ee7329;
+}
+
 .list-item{
     display:grid;
     border: 1px solid #ee7329;
@@ -6,16 +20,23 @@
     padding: 15px;
     margin: 5px;
     width: 168px;
-    height: 250px;
+    height: 200px;
+    cursor: pointer;
 }
 
 .pokemon-list-wrapper{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    justify-content: space-around;
+    gap: 16px;
     padding: 20px;
 }
 .pokeimg{
     width:auto;
     height: auto;
+}
+
+.pokemon-name{
+    text-transform: capitalize;
 }
